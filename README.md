@@ -21,7 +21,8 @@ Solutions manual to accompany [Deep Learning Specialization on Coursera](https:/
 
 #### Week 2 - Neural Networks Basics
 
+- [Neural Network Basics](https://github.com/bugstop/coursera-deep-learning/blob/master/A%20-%20Neural%20Networks%20and%20Deep%20Learning/week%202/Neural_Network_Basics.md)
 
-
+<br>
 
 > TO BE CONTINUED
