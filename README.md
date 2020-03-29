@@ -23,6 +23,14 @@ Solutions manual to accompany [Deep Learning Specialization on Coursera](https:/
 
 - [Deep Neural Network - Application](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/A%20-%20Neural%20Networks%20and%20Deep%20Learning/week%204/Deep_Neural_Network_Application_v8.ipynb)
 
+### Course B - Improving Deep Neural Networks
+
+#### Week 1 - Practical Aspects of Deep Learning
+
+- [Initialization](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/B%20-%20Improving%20Deep%20Neural%20Networks/week%201/Initialization.ipynb)
+- [Regularization](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/B%20-%20Improving%20Deep%20Neural%20Networks/week%201/Regularization_v2a.ipynb)
+- [Gradient Checking](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/B%20-%20Improving%20Deep%20Neural%20Networks/week%201/Gradient_Checking_v1.ipynb)
+
 <br>
 
 ## Practice Questions
@@ -44,6 +52,12 @@ Solutions manual to accompany [Deep Learning Specialization on Coursera](https:/
 #### Week 4 - Deep Neural Networks
 
 - [Key concepts on Deep Neural Networks](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/A%20-%20Neural%20Networks%20and%20Deep%20Learning/week%204/Key_concepts_on_Deep_Neural_Networks.md)
+
+### Course B - Improving Deep Neural Networks
+
+#### Week 1 - Practical Aspects of Deep Learning
+
+- [Practical aspects of deep learning](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/B%20-%20Improving%20Deep%20Neural%20Networks/week%201/Practical_aspects_of_deep_learning.md)
 
 <br>
 
