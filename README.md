@@ -31,6 +31,10 @@ Solutions manual to accompany [Deep Learning Specialization on Coursera](https:/
 - [Regularization](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/B%20-%20Improving%20Deep%20Neural%20Networks/week%201/Regularization_v2a.ipynb)
 - [Gradient Checking](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/B%20-%20Improving%20Deep%20Neural%20Networks/week%201/Gradient_Checking_v1.ipynb)
 
+#### Week 2 - Optimization Algorithms
+
+- [Optimization](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/B%20-%20Improving%20Deep%20Neural%20Networks/week%202/Optimization_methods_v1b.ipynb)
+
 <br>
 
 ## Practice Questions
@@ -58,6 +62,10 @@ Solutions manual to accompany [Deep Learning Specialization on Coursera](https:/
 #### Week 1 - Practical Aspects of Deep Learning
 
 - [Practical aspects of deep learning](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/B%20-%20Improving%20Deep%20Neural%20Networks/week%201/Practical_aspects_of_deep_learning.md)
+
+#### Week 2 - Optimization Algorithms
+
+- [Optimization algorithms](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/B%20-%20Improving%20Deep%20Neural%20Networks/week%202/Optimization_algorithms.md)
 
 <br>
 
