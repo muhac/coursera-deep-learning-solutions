@@ -154,7 +154,7 @@ Correct
 Correct
 ```
 
-10. **Why do we normalize the inputs x*x*?**
+10. **Why do we normalize the inputs x?**
 
 - [ ] Normalization is another word for regularization--It helps to reduce variance
 

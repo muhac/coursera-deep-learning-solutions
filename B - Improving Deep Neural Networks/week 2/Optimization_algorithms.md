@@ -2,7 +2,7 @@
 
 ## Week 2 - Optimization algorithms
 
-1. Which notation would you use to denote the 3rd layer’s activations when the input is the 7th example from the 8th minibatch?
+1. **Which notation would you use to denote the 3rd layer’s activations when the input is the 7th example from the 8th minibatch?**
 
 - [ ] a[8]{7}(3)
 
@@ -16,7 +16,7 @@
 Correct
 ```
 
-2. Which of these statements about mini-batch gradient descent do you agree with?
+2. **Which of these statements about mini-batch gradient descent do you agree with?**
 
 - [ ] Training one epoch (one pass through the training set) using mini-batch gradient descent is faster than training one epoch using batch gradient descent.
 
@@ -28,7 +28,7 @@ Correct
 Correct
 ```
 
-3. Why is the best mini-batch size usually not 1 and not m, but instead something in-between?
+3. **Why is the best mini-batch size usually not 1 and not m, but instead something in-between?**
 
 - [ ] If the mini-batch size is m, you end up with stochastic gradient descent, which is usually slower than mini-batch gradient descent.
 
@@ -47,11 +47,11 @@ Correct
 - [ ] If the mini-batch size is 1, you end up having to process the entire training set before making any progress.
 
 
-4. Suppose your learning algorithm’s cost JJ, plotted as a function of the number of iterations, looks like this:
+4. **Suppose your learning algorithm’s cost JJ, plotted as a function of the number of iterations, looks like this:**
 
    ![](q4.png)
 
-   Which of the following do you agree with?
+   **Which of the following do you agree with?**
 
 - [ ] Whether you’re using batch gradient descent or mini-batch gradient descent, something is wrong.
 
@@ -65,7 +65,7 @@ Correct
 Correct
 ```
 
-5. Suppose the temperature in Casablanca over the first three days of January are the same:
+5. **Suppose the temperature in Casablanca over the first three days of January are the same:**
 
    - Jan 1st: \theta_1 = 10^o Cθ 
    - Jan 2nd: \theta_2 10^o Cθ 
@@ -83,7 +83,7 @@ Correct
 ```
 Correct
 ```
-6. Which of these is NOT a good learning rate decay scheme? Here, t is the epoch number.
+6. **Which of these is NOT a good learning rate decay scheme? Here, t is the epoch number.**
 
 - [ ] \alpha = \frac{1}{1+2*t} \alpha_0α= 
 
@@ -97,7 +97,7 @@ Correct
 Correct
 ```
 
-7. You use an exponentially weighted average on the London temperature dataset. You use the following to track the temperature: v_{t} = \beta v_{t-1} + (1-\beta)\theta_tv   The red line below was computed using \beta = 0.9β=0.9. What would happen to your red curve as you vary \betaβ? (Check the two that apply)
+7. **You use an exponentially weighted average on the London temperature dataset. You use the following to track the temperature: v_{t} = \beta v_{t-1} + (1-\beta)\theta_tv   The red line below was computed using \beta = 0.9β=0.9. What would happen to your red curve as you vary \betaβ? (Check the two that apply)**
 
    ![](q7.png)
 
@@ -119,11 +119,11 @@ True, remember that the red line corresponds to \beta = 0.9β=0.9. In lecture we
 
 - [ ] Increasing \betaβ will create more oscillations within the red line.
 
-8. Consider this figure:
+8. **Consider this figure:**
 
    ![](q8.png)
 
-   These plots were generated with gradient descent; with gradient descent with momentum (\betaβ = 0.5) and gradient descent with momentum (\betaβ = 0.9). Which curve corresponds to which algorithm?
+   **These plots were generated with gradient descent; with gradient descent with momentum (\betaβ = 0.5) and gradient descent with momentum (\betaβ = 0.9). Which curve corresponds to which algorithm?**
 
 - [ ] (1) is gradient descent with momentum (small \betaβ), (2) is gradient descent with momentum (small \betaβ), (3) is gradient descent
 
@@ -137,7 +137,7 @@ True, remember that the red line corresponds to \beta = 0.9β=0.9. In lecture we
 Correct
 ```
 
-9. Suppose batch gradient descent in a deep network is taking excessively long to find a value of the parameters that achieves a small value for the cost function J(W[1],b[1],...,W[L],b[L]). Which of the following techniques could help find parameter values that attain a small value forJ? (Check all that apply)
+9. **Suppose batch gradient descent in a deep network is taking excessively long to find a value of the parameters that achieves a small value for the cost function J(W[1],b[1],...,W[L],b[L]). Which of the following techniques could help find parameter values that attain a small value forJ? (Check all that apply)**
 
 - [x] Try mini-batch gradient descent
 
@@ -165,7 +165,7 @@ Correct
 
 - [ ] Try initializing all the weights to zero
 
-10. Which of the following statements about Adam is False?
+10. **Which of the following statements about Adam is False?**
 
 - [ ] The learning rate hyperparameter \alphaα in Adam usually needs to be tuned.
 

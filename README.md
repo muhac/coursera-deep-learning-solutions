@@ -28,12 +28,18 @@ Solutions manual to accompany [Deep Learning Specialization on Coursera](https:/
 #### Week 1 - Practical Aspects of Deep Learning
 
 - [Initialization](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/B%20-%20Improving%20Deep%20Neural%20Networks/week%201/Initialization.ipynb)
+
 - [Regularization](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/B%20-%20Improving%20Deep%20Neural%20Networks/week%201/Regularization_v2a.ipynb)
+
 - [Gradient Checking](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/B%20-%20Improving%20Deep%20Neural%20Networks/week%201/Gradient_Checking_v1.ipynb)
 
 #### Week 2 - Optimization Algorithms
 
 - [Optimization](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/B%20-%20Improving%20Deep%20Neural%20Networks/week%202/Optimization_methods_v1b.ipynb)
+
+#### Week 3 - Hyperparameter Tuning, Batch Normalization and Programming Frameworks
+
+- [TensorFlow](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/B%20-%20Improving%20Deep%20Neural%20Networks/week%203/TensorFlow_Tutorial_v3b.ipynb)
 
 <br>
 
@@ -66,6 +72,10 @@ Solutions manual to accompany [Deep Learning Specialization on Coursera](https:/
 #### Week 2 - Optimization Algorithms
 
 - [Optimization algorithms](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/B%20-%20Improving%20Deep%20Neural%20Networks/week%202/Optimization_algorithms.md)
+
+#### Week 3 - Hyperparameter Tuning, Batch Normalization and Programming Frameworks
+
+- [Hyperparameter tuning, Batch Normalization and Programming Frameworks](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/B%20-%20Improving%20Deep%20Neural%20Networks/week%203/Hyperparameter_tuning_Batch_Normalization_Programming_Frameworks.md)
 
 <br>
 
