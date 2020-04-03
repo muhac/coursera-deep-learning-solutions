@@ -77,6 +77,12 @@ Solutions manual to accompany [Deep Learning Specialization on Coursera](https:/
 
 - [Hyperparameter tuning, Batch Normalization and Programming Frameworks](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/B%20-%20Improving%20Deep%20Neural%20Networks/week%203/Hyperparameter_tuning_Batch_Normalization_Programming_Frameworks.md)
 
+### Course C - Structuring Machine Learning Projects
+
+#### Week 1 - ML Strategy (1)
+
+- [Bird recognition in the city of Peacetopia (case study)](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/C%20-%20Structuring%20Machine%20Learning%20Projects/week%201/Bird_recognition_in_the_city_of_Peacetopia.md)
+
 <br>
 
 > TO BE CONTINUED
