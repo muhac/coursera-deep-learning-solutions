@@ -83,6 +83,10 @@ Solutions manual to accompany [Deep Learning Specialization on Coursera](https:/
 
 - [Bird recognition in the city of Peacetopia (case study)](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/C%20-%20Structuring%20Machine%20Learning%20Projects/week%201/Bird_recognition_in_the_city_of_Peacetopia.md)
 
+#### Week 2 - ML Strategy (2)
+
+- [Autonomous driving (case study)](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/C%20-%20Structuring%20Machine%20Learning%20Projects/week%202/Autonomous_driving.md)
+
 <br>
 
 > TO BE CONTINUED
