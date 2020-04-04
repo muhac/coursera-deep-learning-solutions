@@ -41,6 +41,13 @@ Solutions manual to accompany [Deep Learning Specialization on Coursera](https:/
 
 - [TensorFlow](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/B%20-%20Improving%20Deep%20Neural%20Networks/week%203/TensorFlow_Tutorial_v3b.ipynb)
 
+### Course D - Convolutional Neural Networks
+
+#### Week 1 - Foundations of Convolutional Neural Networks
+
+- [Convolutional Model: step by step](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/D%20-%20Convolutional%20Neural%20Networks/week%201/Convolution_model_Step_by_Step_v2a.ipynb)
+- [Convolutional Model: application](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/D%20-%20Convolutional%20Neural%20Networks/week%201/Convolution_model_Application_v1a.ipynb)
+
 <br>
 
 ## Practice Questions
@@ -86,6 +93,12 @@ Solutions manual to accompany [Deep Learning Specialization on Coursera](https:/
 #### Week 2 - ML Strategy (2)
 
 - [Autonomous driving (case study)](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/C%20-%20Structuring%20Machine%20Learning%20Projects/week%202/Autonomous_driving.md)
+
+### Course D - Convolutional Neural Networks
+
+#### Week 1 - Foundations of Convolutional Neural Networks
+
+- [The basics of ConvNets](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/D%20-%20Convolutional%20Neural%20Networks/week%201/The_basics_of_ConvNets.md)
 
 <br>
 
