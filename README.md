@@ -1,7 +1,11 @@
 # Solutions Manual <sub>Deep Learning <sub>Andrew Ng</sub></sub>
 Solutions manual to accompany [Deep Learning Specialization on Coursera](https://www.coursera.org/specializations/deep-learning).
 
-<br>
+| **Programming Assignments** | [**Course A**](https://github.com/bugstop/coursera-deep-learning-solutions#course-a---neural-networks-and-deep-learning) | [**Course B**](https://github.com/bugstop/coursera-deep-learning-solutions#course-b---improving-deep-neural-networks) | **Course C** | [**Course D**](https://github.com/bugstop/coursera-deep-learning-solutions#course-d---convolutional-neural-networks) | **Course E** |
+| --------------------------------: | :----------: | :----------: | :----------: | :----------: | :----------: |
+|      **Practice Questions** | [**Course A**](https://github.com/bugstop/coursera-deep-learning-solutions#course-a---neural-networks-and-deep-learning-1) | [**Course B**](https://github.com/bugstop/coursera-deep-learning-solutions#course-b---improving-deep-neural-networks-1) | [**Course C**](https://github.com/bugstop/coursera-deep-learning-solutions#course-c---structuring-machine-learning-projects) | [**Course D**](https://github.com/bugstop/coursera-deep-learning-solutions#course-c---structuring-machine-learning-projects) | **Course E** |
+
+------
 
 ## Programming Assignments
 
@@ -46,7 +50,14 @@ Solutions manual to accompany [Deep Learning Specialization on Coursera](https:/
 #### Week 1 - Foundations of Convolutional Neural Networks
 
 - [Convolutional Model: step by step](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/D%20-%20Convolutional%20Neural%20Networks/week%201/Convolution_model_Step_by_Step_v2a.ipynb)
+
 - [Convolutional Model: application](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/D%20-%20Convolutional%20Neural%20Networks/week%201/Convolution_model_Application_v1a.ipynb)
+
+#### Week 2 - Deep Convolutional Models: case studies
+
+- [Keras Tutorial (not graded)](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/D%20-%20Convolutional%20Neural%20Networks/week%202/Keras_Tutorial_v2a.ipynb)
+
+- [Residual Networks](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/D%20-%20Convolutional%20Neural%20Networks/week%202/Residual_Networks_v2a.ipynb)
 
 <br>
 
@@ -99,6 +110,10 @@ Solutions manual to accompany [Deep Learning Specialization on Coursera](https:/
 #### Week 1 - Foundations of Convolutional Neural Networks
 
 - [The basics of ConvNets](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/D%20-%20Convolutional%20Neural%20Networks/week%201/The_basics_of_ConvNets.md)
+
+#### Week 2 - Deep Convolutional Models: case studies
+
+- [Deep convolutional models](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/D%20-%20Convolutional%20Neural%20Networks/week%202/Deep_convolutional_models.md)
 
 <br>
 
