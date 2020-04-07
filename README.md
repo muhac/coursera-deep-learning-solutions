@@ -59,6 +59,10 @@ Solutions manual to accompany [Deep Learning Specialization on Coursera](https:/
 
 - [Residual Networks](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/D%20-%20Convolutional%20Neural%20Networks/week%202/Residual_Networks_v2a.ipynb)
 
+#### Week 3 - Object Detection
+
+- [Car detection with YOLO](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/D%20-%20Convolutional%20Neural%20Networks/week%203/Autonomous_driving_application_Car_detection_v3a.ipynb)
+
 <br>
 
 ## Practice Questions
@@ -114,6 +118,10 @@ Solutions manual to accompany [Deep Learning Specialization on Coursera](https:/
 #### Week 2 - Deep Convolutional Models: case studies
 
 - [Deep convolutional models](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/D%20-%20Convolutional%20Neural%20Networks/week%202/Deep_convolutional_models.md)
+
+#### Week 3 - Object Detection
+
+- [Detection algorithms](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/D%20-%20Convolutional%20Neural%20Networks/week%203/Detection_algorithms.md)
 
 <br>
 
