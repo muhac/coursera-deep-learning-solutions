@@ -6,6 +6,7 @@ Solutions manual to accompany [Deep Learning Specialization on Coursera](https:/
 |      **Practice Questions** | [**Course A**](https://github.com/bugstop/coursera-deep-learning-solutions#course-a---neural-networks-and-deep-learning-1) | [**Course B**](https://github.com/bugstop/coursera-deep-learning-solutions#course-b---improving-deep-neural-networks-1) | [**Course C**](https://github.com/bugstop/coursera-deep-learning-solutions#course-c---structuring-machine-learning-projects) | [**Course D**](https://github.com/bugstop/coursera-deep-learning-solutions#course-c---structuring-machine-learning-projects) | **Course E** |
 
 ------
+<br>
 
 ## Programming Assignments
 
