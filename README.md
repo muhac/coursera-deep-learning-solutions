@@ -64,6 +64,22 @@ Solutions manual to accompany [Deep Learning Specialization on Coursera](https:/
 
 - [Car detection with YOLO](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/D%20-%20Convolutional%20Neural%20Networks/week%203/Autonomous_driving_application_Car_detection_v3a.ipynb)
 
+#### Week 4 - Special Applications: Face Recognition & Neural Style Transfer
+
+- [Art generation with Neural Style Transfer](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/D%20-%20Convolutional%20Neural%20Networks/week%204/Art_Generation_with_Neural_Style_Transfer_v3a.ipynb)
+
+- [Face Recognition](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/D%20-%20Convolutional%20Neural%20Networks/week%204/Face_Recognition_v3a.ipynb)
+
+### Course E - Sequence Models
+
+#### Week 1 - Recurrent Neural Networks
+
+- [Building a recurrent neural network - step by step](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/E%20-%20Sequence%20Models/week%201/Building_a_Recurrent_Neural_Network_Step_by_Step_v3a.ipynb)
+
+- [Dinosaur Island - Character-Level Language Modeling](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/E%20-%20Sequence%20Models/week%201/Dinosaurus_Island_Character_level_language_model_final_v3a.ipynb)
+
+- [Jazz improvisation with LSTM](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/E%20-%20Sequence%20Models/week%201/Improvise_a_Jazz_Solo_with_an_LSTM_Network_v3a.ipynb)
+
 <br>
 
 ## Practice Questions
@@ -123,6 +139,16 @@ Solutions manual to accompany [Deep Learning Specialization on Coursera](https:/
 #### Week 3 - Object Detection
 
 - [Detection algorithms](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/D%20-%20Convolutional%20Neural%20Networks/week%203/Detection_algorithms.md)
+
+#### Week 4 - Special Applications: Face Recognition & Neural Style Transfer
+
+- [Special applications: Face recognition & Neural style transfer](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/D%20-%20Convolutional%20Neural%20Networks/week%204/Special_applications.md)
+
+### Course E - Sequence Models
+
+#### Week 1 - Recurrent Neural Networks
+
+- [Recurrent Neural Networks](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/E%20-%20Sequence%20Models/week%201/Recurrent_Neural_Networks.md)
 
 <br>
 
