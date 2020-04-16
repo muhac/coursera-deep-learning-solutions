@@ -80,6 +80,12 @@ Solutions manual to accompany [Deep Learning Specialization on Coursera](https:/
 
 - [Jazz improvisation with LSTM](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/E%20-%20Sequence%20Models/week%201/Improvise_a_Jazz_Solo_with_an_LSTM_Network_v3a.ipynb)
 
+#### Week 2 - Natural Language Processing & Word Embeddings
+
+- [Operations on word vectors - Debiasing](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/E%20-%20Sequence%20Models/week%202/Operations_on_word_vectors_v2a.ipynb)
+
+- [Emojify](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/E%20-%20Sequence%20Models/week%202/Emojify_v2a.ipynb)
+
 <br>
 
 ## Practice Questions
@@ -149,6 +155,10 @@ Solutions manual to accompany [Deep Learning Specialization on Coursera](https:/
 #### Week 1 - Recurrent Neural Networks
 
 - [Recurrent Neural Networks](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/E%20-%20Sequence%20Models/week%201/Recurrent_Neural_Networks.md)
+
+#### Week 2 - Natural Language Processing & Word Embeddings
+
+- [Natural Language Processing & Word Embeddings](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/E%20-%20Sequence%20Models/week%202/Natural_Language_Processing.md)
 
 <br>
 
