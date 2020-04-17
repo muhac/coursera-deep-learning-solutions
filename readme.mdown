@@ -4,6 +4,7 @@ Solutions manual to accompany [Deep Learning Specialization on Coursera](https:/
 | **Programming Assignments** | [**Course A**](https://github.com/bugstop/coursera-deep-learning-solutions#course-a---neural-networks-and-deep-learning) | [**Course B**](https://github.com/bugstop/coursera-deep-learning-solutions#course-b---improving-deep-neural-networks) | **Course C** | [**Course D**](https://github.com/bugstop/coursera-deep-learning-solutions#course-d---convolutional-neural-networks) | [**Course E**](https://github.com/bugstop/coursera-deep-learning-solutions#course-e---sequence-models) |
 | --------------------------------: | :----------: | :----------: | :----------: | :----------: | :----------: |
 |      **Practice Questions** | [**Course A**](https://github.com/bugstop/coursera-deep-learning-solutions#course-a---neural-networks-and-deep-learning-1) | [**Course B**](https://github.com/bugstop/coursera-deep-learning-solutions#course-b---improving-deep-neural-networks-1) | [**Course C**](https://github.com/bugstop/coursera-deep-learning-solutions#course-c---structuring-machine-learning-projects) | [**Course D**](https://github.com/bugstop/coursera-deep-learning-solutions#course-c---structuring-machine-learning-projects) | [**Course E**](https://github.com/bugstop/coursera-deep-learning-solutions#course-e---sequence-models-1) |
+<br>
 
 ------
 <br>
@@ -92,6 +93,9 @@ Solutions manual to accompany [Deep Learning Specialization on Coursera](https:/
 
 - [Trigger word detection](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/E%20-%20Sequence%20Models/week%203/Trigger_word_detection_v1a.ipynb)
 
+<br>
+
+------
 <br>
 
 ## Practice Questions
