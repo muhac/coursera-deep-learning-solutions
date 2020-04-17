@@ -86,6 +86,12 @@ Solutions manual to accompany [Deep Learning Specialization on Coursera](https:/
 
 - [Emojify](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/E%20-%20Sequence%20Models/week%202/Emojify_v2a.ipynb)
 
+#### Week 3 - Sequence Models & Attention Mechanism
+
+- [Neural Machine Translation with Attention](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/E%20-%20Sequence%20Models/week%203/Neural_machine_translation_with_attention_v4a.ipynb)
+
+- [Trigger word detection](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/E%20-%20Sequence%20Models/week%203/Trigger_word_detection_v1a.ipynb)
+
 <br>
 
 ## Practice Questions
@@ -160,6 +166,6 @@ Solutions manual to accompany [Deep Learning Specialization on Coursera](https:/
 
 - [Natural Language Processing & Word Embeddings](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/E%20-%20Sequence%20Models/week%202/Natural_Language_Processing.md)
 
-<br>
+#### Week 3 - Sequence Models & Attention Mechanism
 
-> TO BE CONTINUED
+- [Sequence Models & Attention Mechanism](https://github.com/bugstop/coursera-deep-learning-solutions/blob/master/E%20-%20Sequence%20Models/week%203/Sequence_Models_and_Attention_Mechanism.md)
