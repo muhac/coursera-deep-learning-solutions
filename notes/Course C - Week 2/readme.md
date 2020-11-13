@@ -7,9 +7,9 @@ mathjax: true
 ---
 
 Deep Learning Specialization, Course C
-**Structuring Machine Learning Projects** by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+**Structuring Machine Learning Projects** by deeplearning.ai, **_Andrew Ng,_** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
-***Week 2:*** *ML Strategy (2)*
+**_Week 2:_** _ML Strategy (2)_
 
 1. Understand what multi-task learning and transfer learning are
 2. Recognize bias, variance and data-mismatch by looking at the performances of your algorithm on train/dev/test sets
@@ -20,10 +20,10 @@ Deep Learning Specialization, Course C
 
 #### Carrying out Error Analysis
 
-***Error analysis:*** Should you try to make your cat classifier do better on dogs?
+**_Error analysis:_** Should you try to make your cat classifier do better on dogs?
 
 - get ~ 100 mislabeled dev set examples
-- count up how many are dogs (5%? / 50%?) **→ ceiling on  performance**
+- count up how many are dogs (5%? / 50%?) **→ ceiling on performance**
 
 |     Image      | Dogs | Great Cats | Blurry  | Incorrectly Labeled | Comments |
 | :------------: | :--: | :--------: | :-----: | :-----------------: | :------: |
@@ -51,7 +51,7 @@ Deep Learning Specialization, Course C
 
 #### Training and Testing on Different Distributions
 
-![1](dl-su-9/1.png)
+![1](Deep-Learning-Andrew-Ng-9/1.png)
 
 - **Option 1** ×
 
@@ -63,11 +63,11 @@ Deep Learning Specialization, Course C
 
 #### Bias and Variance with Mismatched Data Distributions
 
-> increase in dev error ***(1)*** is because the algorithm didn't see the data in the dev set ***(variance problem)*** or ***(2)*** is because the dev set data is just different ***(distribution problem)***
+> increase in dev error **_(1)_** is because the algorithm didn't see the data in the dev set **_(variance problem)_** or **_(2)_** is because the dev set data is just different **_(distribution problem)_**
 
-***training-dev set:*** same distribution as training set, but not used for training
+**_training-dev set:_** same distribution as training set, but not used for training
 
-![t-d](dl-su-9/2.png)
+![t-d](Deep-Learning-Andrew-Ng-9/2.png)
 
 |       ~ 0% Human Error&emsp;&emsp; | Avoidable Bias | Variance | Data Mismatch |
 | ---------------------------------: | :------------: | :------: | :-----------: |
@@ -84,15 +84,15 @@ $\qquad \begin{aligned} \textrm{Human Level Error} & \quad 4\% \\ & \quad \updow
 
 ##### Artificial Data Synthesis
 
-***be careful:*** *overfit subsets*
+**_be careful:_** _overfit subsets_
 
-![3](dl-su-9/3.png)
+![3](Deep-Learning-Andrew-Ng-9/3.png)
 
 ### Learning from Multiple Tasks
 
 #### Transfer Learning
 
-![t](dl-su-9/4.png)
+![t](Deep-Learning-Andrew-Ng-9/4.png)
 
 **pre-training → fine-tuning**
 
@@ -108,7 +108,7 @@ $\qquad \begin{aligned} \textrm{Human Level Error} & \quad 4\% \\ & \quad \updow
 
 #### Multi-Task Learning
 
-![t](dl-su-9/5.png)
+![t](Deep-Learning-Andrew-Ng-9/5.png)
 
 $\begin{aligned} \hat{y}^{\left(i\right)}_{\Tiny{4\times1}} = \frac{1}{m}\sum_{i=1}^{m}\sum_{j=1}^{4}L\left( \hat{y}^{\left(i\right)}_j,\,y^{\left(i\right)}_j \right) \end{aligned}$
 
@@ -126,9 +126,9 @@ multi-task learning works even if some of the images are labeled only some of th
 
 #### What is End-to-End Deep Learning?
 
-![e](dl-su-9/6.png)
+![e](Deep-Learning-Andrew-Ng-9/6.png)
 
-***Key question: Do you have sufficient data to learn the function of the complexity needed to map from X to Y?***
+**_Key question: Do you have sufficient data to learn the function of the complexity needed to map from X to Y?_**
 
 #### Whether to Use End-to-End Deep Learning
 

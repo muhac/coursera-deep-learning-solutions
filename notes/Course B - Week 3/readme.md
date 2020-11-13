@@ -8,9 +8,9 @@ mathjax: true
 
 Deep Learning Specialization, Course B
 **Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization**
-by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+by deeplearning.ai, **_Andrew Ng,_** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
-***Week 3:*** *Hyperparameter Tuning, Batch Normalization and Programming Frameworks*
+**_Week 3:_** _Hyperparameter Tuning, Batch Normalization and Programming Frameworks_
 
 1. Master the process of hyperparameter tuning
 
@@ -21,15 +21,15 @@ by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/
 #### Tuning Process
 
 - **hyperparameter**
-- ***α***
+- **_α_**
   - **β** ~ 0.9
   - β<sub>1</sub>, β<sub>2</sub>, ε = 0.9, 0.999, 10<sup>-8</sup>
-  - *\# layers*
+  - _\# layers_
   - **\# hidden units**
-  - *learning rate decay*
+  - _learning rate decay_
   - **mini-batch size**
 
-try **random values,** don't use a *grid;*  
+try **random values,** don't use a _grid;_  
 **coarse to fine** search
 
 #### Using an Appropriate Scale to Pick Hyperparameters
@@ -50,18 +50,18 @@ beta = 1 - 10 ** r
 
 #### Hyperparameters Tuning in Practice: Pandas vs. Caviar
 
-- ***Pandas:*** babysitting one model
-- ***Caviar:*** training many models in parallel
+- **_Pandas:_** babysitting one model
+- **_Caviar:_** training many models in parallel
 
 ### Batch Normalization
 
 #### Normalizing Activations in a Network
 
-![c](dl-su-7/1.png)
+![c](Deep-Learning-Andrew-Ng-7/1.png)
 
 $\qquad \begin{aligned}\mu &= \frac{1}{m} \sum_{i=1}^{m} x^{\left( i \right)} \\\sigma ^2 &= \frac{1}{m} \sum_{i=1}^{m} { x^{\left( i \right)} } ^2 \\ x &= \dfrac{x- \mu}{\sigma} \end{aligned}$
 
-![c](dl-su-7/2.png)
+![c](Deep-Learning-Andrew-Ng-7/2.png)
 
 **normalize z<sup>[l]</sup>**
 
@@ -69,7 +69,7 @@ Given some intermediate values $z^{\left[l\right]\left(i\right)} = z^{\left( 1 \
 
 $\qquad \begin{aligned}\mu &= \frac{1}{m} \sum_{i=1}^{m} z^{\left( i \right)} \\ \sigma ^2 &= \frac{1}{m} \sum_{i=1}^{m} {\left( z^{\left( i \right)} -\mu \right)} ^2 \\ z^{\left( i \right)}_{\rm norm} &= \dfrac{z^{\left( i \right)}- \mu}{\sqrt{ \sigma^2 + \varepsilon }} \\ \tilde{z}^{\left( i \right)} &= \gamma z^{\left( i \right)}_{\rm norm} + \beta \end{aligned}$
 
-&emsp;&emsp;&emsp;&emsp;&emsp;*γ, β are learnable parameters of your model*
+&emsp;&emsp;&emsp;&emsp;&emsp;_γ, β are learnable parameters of your model_
 
 use $\tilde{z}^{\left[l\right]\left(i\right)}$ instead of $z^{\left[l\right]\left(i\right)}$
 
@@ -83,7 +83,7 @@ $x \xrightarrow{ W^{\left[1\right]},\,b^{\left[1\right]} } z^{\left[1\right]} \x
 
 $\begin{aligned} & X^{\left\{1\right\}} \xrightarrow{ W^{\left[1\right]},\,b^{\left[1\right]} } Z^{\left[1\right]} \xrightarrow[\small {}^\textsf{Batch Norm}]{ \gamma^{\left[1\right]},\,\beta^{\left[1\right]} } \tilde{Z}^{\left[1\right]} \xrightarrow[\small {}^{g^{\left[1\right]}}]{} A^{\left[1\right]}  \xrightarrow{ W^{\left[2\right]},\,b^{\left[2\right]} } Z^{\left[2\right]} \xrightarrow[\small {}^\textsf{Batch Norm}]{ \gamma^{\left[2\right]},\,\beta^{\left[2\right]} } \tilde{Z}^{\left[2\right]} \xrightarrow[\small {}^{g^{\left[2\right]}}]{} A^{\left[2\right]} \xrightarrow{} \cdots \\ & X^{\left\{2\right\}} \xrightarrow{ W^{\left[1\right]},\,b^{\left[1\right]} } Z^{\left[1\right]} \xrightarrow[\small {}^\textsf{Batch Norm}]{ \gamma^{\left[1\right]},\,\beta^{\left[1\right]} } \tilde{Z}^{\left[1\right]} \xrightarrow[\small {}^{g^{\left[1\right]}}]{} A^{\left[1\right]}  \xrightarrow{ W^{\left[2\right]},\,b^{\left[2\right]} } Z^{\left[2\right]} \xrightarrow[\small {}^\textsf{Batch Norm}]{ \gamma^{\left[2\right]},\,\beta^{\left[2\right]} } \tilde{Z}^{\left[2\right]} \xrightarrow[\small {}^{g^{\left[2\right]}}]{} A^{\left[2\right]} \xrightarrow{} \cdots \\ & \cdots \end{aligned}$
 
-&emsp;&emsp;***Notice:*** b<sup>[l]</sup> can be eliminated (or always be zero) since it is subtracted out during batch normalization
+&emsp;&emsp;**_Notice:_** b<sup>[l]</sup> can be eliminated (or always be zero) since it is subtracted out during batch normalization
 
 &emsp;&emsp;$\begin{aligned} & z^{\left[l\right]} = W^{\left[l\right]}a^{\left[l-1\right]} \\ & \tilde{z}^{\left[l\right]} = \gamma^{\left[l\right]} z^{\left( l \right)}_{\rm norm} +\beta^{\left[l\right]} \end{aligned}$
 
@@ -95,13 +95,13 @@ for t = 1, 2, ..., num_mini_batches
 
 &emsp;&emsp;&emsp;&emsp;in each hidden layer, use BN to replace z<sup>[l]</sup> with z̃<sup>[l]</sup>
 
-&emsp;&emsp;back prop  to compute dW<sup>[l]</sup>, dγ<sup>[l]</sup>, dβ<sup>[l]</sup>
+&emsp;&emsp;back prop to compute dW<sup>[l]</sup>, dγ<sup>[l]</sup>, dβ<sup>[l]</sup>
 
 &emsp;&emsp;update parameters
 
 &emsp;&emsp;$\qquad \begin{aligned} & W^{\left[l\right]} := W^{\left[l\right]} - dW^{\left[l\right]} \\ & \gamma^{\left[l\right]} := \gamma^{\left[l\right]} - d\gamma^{\left[l\right]} \\ & \beta^{\left[l\right]} := \beta^{\left[l\right]} - d\beta^{\left[l\right]} \end{aligned}$
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;*works with Momentum / RMSProp / Adam*
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;_works with Momentum / RMSProp / Adam_
 
 #### Why does Batch Norm Work?
 
@@ -111,7 +111,7 @@ batch norm limits the amount to which updating the parameters in the earlier lay
 
 **regularization**
 
-similar to dropout, batch norm adds some noise to each hidden layer's activations which has a *slight* effect
+similar to dropout, batch norm adds some noise to each hidden layer's activations which has a _slight_ effect
 
 #### Batch Norm at Test Time
 
@@ -131,13 +131,13 @@ $\qquad \begin{aligned}\mu ^{\left[l\right]} &= \frac{1}{T} \sum_{t=1}^{T} \mu^{
 
 **C = #classes** = 4 → **n<sup>[L]</sup> = C** = 4 → ŷ ∈ R<sup>4×1</sup>
 
-![c](dl-su-7/3.png)
+![c](Deep-Learning-Andrew-Ng-7/3.png)
 
 $\begin{aligned} z^{\left[L\right]} &= W^{\left[L\right]} a^{\left[L-1\right]} + b^{\left[L\right]} \\ & \textsf{Activation Function}^{\strut} \\ t &= e^{ z^{\left[L\right]} } , \qquad t \in \mathbb{R}^{4 \times 1} \\ a^{\left[L\right]} &= \dfrac{e^{ z^{\left[L\right]} }}{\sum_{i=1}^{4} t_i} , \qquad a_i^{\left[L\right]} = \dfrac{t_i}{\sum_{i=1}^{4} t_i} \end{aligned}$
 
 $\Rightarrow {\rm softmax:}\ \ a^{\left[L\right]}_{\Tiny{(C,1)}} = g^{\left[L\right]} \left( z^{\left[L\right]}_{\Tiny{(C,1)}} \right)$
 
-***softmax regression generalizes logistic regression to C classes***
+**_softmax regression generalizes logistic regression to C classes_**
 
 #### Training a Softmax Classifier
 
@@ -159,12 +159,12 @@ $dz^{\left[L\right]} = \dfrac{\partial J}{\partial z^{\left[L\right]}} = \hat{y}
 
 #### TensorFlow
 
-[tensorflow.ipynb](dl-su-7/tensorflow.ipynb)
+[tensorflow.ipynb](http://deep-learning.coursera.course.bugstop.site/B%20-%20Improving%20Deep%20Neural%20Networks/week%203/TensorFlow_Tutorial_v3b.html)
 
 ### Programming Assignments
 
 #### TensorFlow
 
-![t](/dl-su-7/4.png)
+![t](/Deep-Learning-Andrew-Ng-7/4.png)
 
 <a href='https://github.com/bugstop/coursera-deep-learning-solutions' target="_blank">Solutions Manual</a>

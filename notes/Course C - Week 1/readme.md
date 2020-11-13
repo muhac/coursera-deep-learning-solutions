@@ -7,9 +7,9 @@ mathjax: true
 ---
 
 Deep Learning Specialization, Course C
-**Structuring Machine Learning Projects** by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+**Structuring Machine Learning Projects** by deeplearning.ai, **_Andrew Ng,_** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
-***Week 1:*** *ML Strategy (1)*
+**_Week 1:_** _ML Strategy (1)_
 
 1. Understand why Machine Learning strategy is important
 2. Apply satisficing and optimizing metrics to set up your goal for ML projects
@@ -67,20 +67,20 @@ Deep Learning Specialization, Course C
 |   **A**    |   95 %    |  90 %  |     **92.4 %**      |
 |   **B**    |   98 %    |  85 %  |       91.0 %        |
 
-*dev set + single number evaluation metric speed up iterating process*
+_dev set + single number evaluation metric speed up iterating process_
 
 #### Satisficing and Optimizing Metric
 
 | Classifier |     Accuracy     |   Running Time    |
 | :--------: | :--------------: | :---------------: |
 |   **A**    |       90 %       |       80 ms       |
-|   **B**    |     **92 %**     |    ***95 ms***    |
+|   **B**    |     **92 %**     |    **_95 ms_**    |
 |   **C**    |       95 %       |      1500 ms      |
-|            | ***optimizing*** | ***satisficing*** |
+|            | **_optimizing_** | **_satisficing_** |
 
-**maximize accuracy** subject to ***running time < 100 ms***
+**maximize accuracy** subject to **_running time < 100 ms_**
 
-- ***N metric:*** 1 optimizing, N-1 satisficing
+- **_N metric:_** 1 optimizing, N-1 satisficing
 
 #### Train / Dev / Test Distributions
 
@@ -90,29 +90,30 @@ choose a dev set and test set to reflect data you expect to get in the future an
 
 #### Size of Dev and Test Sets
 
-train / dev / test  
+train / dev / test
+
 - ~ 1k examples: 70%-30% or 60%-20%-20%
 - ~ 1m examples: 98%-1%-1%, smaller dev and test sets
 
-*set test set to be big enough to give high confidence in the overall performance of the system (no test set might be okay)*
+_set test set to be big enough to give high confidence in the overall performance of the system (no test set might be okay)_
 
 #### When to Change Dev / Test Sets and Metrics
 
-Metric + Dev: prefers A *(misprediction)*  
+Metric + Dev: prefers A _(misprediction)_  
 You / Users: prefers B
 
-$\begin{aligned}{\rm classification}\ &{\rm error}  _{\strut} \\ \textsf{Algorithm A: }& 3\%\ {\rm error} \textsf{ but contains pornographies} \\ \textsf{Algorithm B: }& 5\%\ {\rm error} _{\strut} \\ \textsf{Error: }& \dfrac{1}{m_{dev}} \sum_{i=1}^{m_{dev}} L\left\{ y_{\rm pred}^{\left(i\right)} \neq y^{\left(i\right)} \right\} \\ \textsf{New Error: }& \dfrac{1}{ \sum_{i=1}^{m_{dev}} \omega^{\left(i\right)}} \sum_{i=1}^{m_{dev}} \omega^{\left(i\right)} L\left\{ y_{\rm pred}^{\left(i\right)} \neq y^{\left(i\right)} \right\} \\ & \qquad\qquad \omega^{\left(i\right)}= \begin{cases} 1 \ \ &{\rm if}\ x^{\left(i\right)}\ {\rm is}\ {\rm non}\!\!-\!\!{\rm porn} \\ 10 &{\rm if}\ x^{\left(i\right)}\ {\rm is}\ {\rm porn} \end{cases} \end{aligned}$
+$\begin{aligned}{\rm classification}\ &{\rm error}  _{\strut} \\ \textsf{Algorithm A: }& 3\%\ {\rm error} \textsf{ but contains pornographies} \\ \textsf{Algorithm B: }& 5\%\ {\rm error} _{\strut} \\ \textsf{Error: }& \dfrac{1}{m_{dev}} \sum_{i=1}^{m_{dev}} L\left\{ y_{\rm pred}^{\left(i\right)} \neq y^{\left(i\right)} \right\} \\ \textsf{New Error: }& \dfrac{1}{ \sum_{i=1}^{m_{dev}} \omega^{\left(i\right)}} \sum_{i=1}^{m_{dev}} \omega^{\left(i\right)} L\left\{ y_{\rm pred}^{\left(i\right)} \neq y^{\left(i\right)} \right\} \\ & \qquad\qquad \omega^{\left(i\right)}= \begin{cases} 1 \ \ &{\rm if}\ x^{\left(i\right)}\ {\rm is}\ {\rm non}\\!\\!-\\!\\!{\rm porn} \\ 10 &{\rm if}\ x^{\left(i\right)}\ {\rm is}\ {\rm porn} \end{cases} \end{aligned}$
 
-1. ***Place the target:*** define a metric to evaluate classifiers
-2. ***Shoot at target:*** worry separately about how to do well on this metric
+1. **_Place the target:_** define a metric to evaluate classifiers
+2. **_Shoot at target:_** worry separately about how to do well on this metric
 
-*if doing well on metric + dev/test set does not correspond to doing well on application, change metric and/or dev/test set*
+_if doing well on metric + dev/test set does not correspond to doing well on application, change metric and/or dev/test set_
 
 ### Comparing to Human-Level Performance
 
 #### Why Human-Level Performance?
 
-![c](dl-su-8/1.png)
+![c](Deep-Learning-Andrew-Ng-8/1.png)
 
 as long as machine learning is worse than humans, you can:
 
@@ -129,13 +130,13 @@ as long as machine learning is worse than humans, you can:
 
 ##### human-level error as a proxy for Bayes error
 
-***bias:*** compare to 0% error  
-***avoidable bias:*** minimum level of error that you cannot get below  
-&emsp;&emsp;*(cannot do better than Bayes error unless overfitting)*
+**_bias:_** compare to 0% error  
+**_avoidable bias:_** minimum level of error that you cannot get below  
+&emsp;&emsp;_(cannot do better than Bayes error unless overfitting)_
 
 #### Understanding Human-Level Performance
 
-**human-level error** as a proxy for ***Bayes error***
+**human-level error** as a proxy for **_Bayes error_**
 
 #### Surpassing Human-Level Performance
 

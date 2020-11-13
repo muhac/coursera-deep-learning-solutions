@@ -7,9 +7,9 @@ mathjax: true
 ---
 
 Deep Learning Specialization, Course D
-**Convolutional Neural Networks** by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+**Convolutional Neural Networks** by deeplearning.ai, **_Andrew Ng,_** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
-***Week 4:*** *Special Applications: Face Recognition & Neural Style Transfer*
+**_Week 4:_** _Special Applications: Face Recognition & Neural Style Transfer_
 
 1. Discover how CNNs can be applied to multiple fields, including art generation and face recognition. Implement your own algorithm to generate art and recognize faces!
 
@@ -19,12 +19,12 @@ Deep Learning Specialization, Course D
 
 #### What is Face Recognition?
 
-**Verification** *( 1 - 1 )*
+**Verification** _( 1 - 1 )_
 
 - input image, name / ID
 - output whether the input image is that of the claimed person
 
-**Recognition** *( 1 - k )*
+**Recognition** _( 1 - k )_
 
 - a database of K persons
 - get an input image
@@ -34,11 +34,11 @@ Deep Learning Specialization, Course D
 
 learning from one example to recognize the person again
 
-**Learning a *similarity* function**
+**Learning a _similarity_ function**
 
 #### Siamese Network
 
-![](dl-su-13/1.png)
+![](Deep-Learning-Andrew-Ng-13/1.png)
 
 $d\left( x^{\left( 1\right) },x^{\left( 2\right) }\right) =\left\| f\left( x^{\left( 1\right) }\right) -f\left( x^{\left( 2\right) }\right) \right\| ^{2}$
 
@@ -49,7 +49,7 @@ $d\left( x^{\left( 1\right) },x^{\left( 2\right) }\right) =\left\| f\left( x^{\l
 
 #### Triplet Loss
 
-***anchor, positive, negative***
+**_anchor, positive, negative_**
 
 $\begin{aligned} d\left(A,P\right) &\leq d\left(A,N\right) \\ \left\| f\left( A \right) -f\left( P \right) \right\| ^{2} &\leq \left\| f\left( A \right) -f\left( N \right) \right\| ^{2} \\ \Rightarrow \ \left\| f\left( A \right) -f\left( P \right) \right\| ^{2} &\,- \left\| f\left( A \right) -f\left( N \right) \right\| ^{2} +\alpha \leq 0\end{aligned}$
 
@@ -59,27 +59,27 @@ $J=\sum_{i=1}^{m} L\left(A^{\left( i\right) },P^{\left( i\right) },N^{\left( i\r
 
 ##### choosing the triplets A, P, N
 
-choose triplets *hard* to train on
+choose triplets _hard_ to train on
 
-![](dl-su-13/2.png)
+![](Deep-Learning-Andrew-Ng-13/2.png)
 
 #### Face Verification and Binary Classification
 
-![](dl-su-13/3.png)
+![](Deep-Learning-Andrew-Ng-13/3.png)
 
 $\begin{aligned} \widehat {y} &=\sigma \left( \sum ^{n}_{k=1}w_{k}\left| f\left( x^{\left( i\right) }\right) _{k}-f\left( x^{\left( j\right) }\right) _{k}\right| +b\right) \\ \widehat {y} &=\sigma \left( \sum ^{n}_{k=1}w_{k} \dfrac{\left( f\left( x^{\left( i\right) }\right) _{k}-f\left( x^{\left( j\right) }\right) _{k}\right)^2}{f\left( x^{\left( i\right) }\right) _{k}+f\left( x^{\left( j\right) }\right) _{k}} +b\right) \qquad \chi ^2\ {\rm similarity} \end{aligned}$
 
-*precompute database*
+_precompute database_
 
 ### Neural Style Transfer
 
 #### What is Neural Style Transfer?
 
-![](dl-su-13/4.png)
+![](Deep-Learning-Andrew-Ng-13/4.png)
 
 #### What are Deep ConvNets Learning?
 
-![](dl-su-13/5.png)
+![](Deep-Learning-Andrew-Ng-13/5.png)
 
 #### Cost Function
 
@@ -114,20 +114,20 @@ $J\left(G\right) = \alpha\cdot J_{\rm content} \left(C,G\right) + \beta\cdot J_{
 
 ##### 2D to 1D
 
-![](dl-su-13/6.png)
+![](Deep-Learning-Andrew-Ng-13/6.png)
 
 ##### 2D to 3D
 
-![](dl-su-13/7.png)
+![](Deep-Learning-Andrew-Ng-13/7.png)
 
 ### Programming Assignments
 
 #### Art generation with Neural Style Transfer
 
-![](/dl-su-13/8.png)
+![](/Deep-Learning-Andrew-Ng-13/8.png)
 
 #### Face Recognition
 
-![](/dl-su-13/9.png)
+![](/Deep-Learning-Andrew-Ng-13/9.png)
 
 <a href='https://github.com/bugstop/coursera-deep-learning-solutions' target="_blank">Solutions Manual</a>

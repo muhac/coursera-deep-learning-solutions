@@ -7,9 +7,9 @@ mathjax: true
 ---
 
 Deep Learning Specialization, Course A
-**Neural Networks and Deep Learning** by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+**Neural Networks and Deep Learning** by deeplearning.ai, **_Andrew Ng,_** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
-***Week 2:*** *Neural Networks Basics*
+**_Week 2:_** _Neural Networks Basics_
 
 1. Build a logistic regression model, structured as a shallow neural network
 2. Implement the main steps of an ML algorithm, including making predictions, derivative computation, and gradient descent.
@@ -25,12 +25,12 @@ Deep Learning Specialization, Course A
 
 #### Binary Classification
 
-- ***y:*** 1<sup>*(cat)*</sup> vs 0<sup>*(non cat)*</sup>
-- ***image size:*** 64 × 64
-- ***n<sub>x</sub>:*** 12288
-- ***m:*** $\left\{ \left(x^{\left(1\right)},\ y^{\left(1\right)}\right),\  \left(x^{\left(2\right)},\ y^{\left(2\right)}\right),\ \dots ,\  \left(x^{\left(m\right)},\ y^{\left(m\right)}\right) \right\} \qquad x^{\left(i\right)}\in\mathbb{R}^{n_x},\ y^{\left(i\right)} \in\left\{0,1\right\}$
+- **_y:_** 1<sup>_(cat)_</sup> vs 0<sup>_(non cat)_</sup>
+- **_image size:_** 64 × 64
+- **_n<sub>x</sub>:_** 12288
+- **_m:_** $\left\{ \left(x^{\left(1\right)},\ y^{\left(1\right)}\right),\  \left(x^{\left(2\right)},\ y^{\left(2\right)}\right),\ \dots ,\  \left(x^{\left(m\right)},\ y^{\left(m\right)}\right) \right\} \qquad x^{\left(i\right)}\in\mathbb{R}^{n_x},\ y^{\left(i\right)} \in\left\{0,1\right\}$
 
-![image](dl-su-2/image.png)
+![image](Deep-Learning-Andrew-Ng-2/image.png)
 
 $x = \underbrace{\left[ \begin{matrix} 255 & 231 & 42 & \cdots & 255 & 134 & 202 & \cdots & 231 & 134 & 93 & \cdots \end{matrix} \right]^{\mathsf{T}}}_{n_x\ =\ 64\times64\times3\ =\ 12288}$
 
@@ -41,20 +41,20 @@ $Y = \left[ \begin{matrix} y^{\left(1\right)} & y^{\left(2\right)} & y^{\left(3\
 #### Logistic Regression
 
 Given $x\in\mathbb{R}^{n_x}$, want $\hat{y} = P\left(y=1\ |\ x\right)$.
-***Parameters:*** $w\in\mathbb{R}^{n_x},\ b\in\mathbb{R}^{n_x}$
-***Output:*** $\hat{y}= \sigma\left( w^{\mathsf{T}}x+b \right) \qquad 0\leq\hat{y}\leq1$
+**_Parameters:_** $w\in\mathbb{R}^{n_x},\ b\in\mathbb{R}^{n_x}$
+**_Output:_** $\hat{y}= \sigma\left( w^{\mathsf{T}}x+b \right) \qquad 0\leq\hat{y}\leq1$
 &emsp;&emsp;&emsp;&emsp;$\sigma\left( z \right)={\rm sigmoid}\left(z\right) = \dfrac{1} {1 + e^{-z}}$
 
-![sigmoid](dl-su-2/sigmoid.png)
+![sigmoid](Deep-Learning-Andrew-Ng-2/sigmoid.png)
 
 #### Logistic Regression Cost Function
 
 Given $\left\{ \left(x^{\left(1\right)},\ y^{\left(1\right)}\right),\  \left(x^{\left(2\right)},\ y^{\left(2\right)}\right),\ \dots ,\  \left(x^{\left(m\right)},\ y^{\left(m\right)}\right) \right\}$, want $\hat{y}^{\left(i\right)}=y^{\left(i\right)}$.
 
-***Loss (error) function:*** $L\left(\hat{y},\,y\right)=-\left( y\log\hat{y} +\left(1-y\right) \log\left(1-\hat{y}\right) \right)$
-&emsp;&emsp;&emsp;&emsp;*Notice:* $L\left(\hat{y},\,y\right) = \dfrac{1}{2}\left(\hat{y}-y\right)^2$ makes optimization problem **non-convex.**
+**_Loss (error) function:_** $L\left(\hat{y},\,y\right)=-\left( y\log\hat{y} +\left(1-y\right) \log\left(1-\hat{y}\right) \right)$
+&emsp;&emsp;&emsp;&emsp;_Notice:_ $L\left(\hat{y},\,y\right) = \dfrac{1}{2}\left(\hat{y}-y\right)^2$ makes optimization problem **non-convex.**
 
-***Cost function:*** $\begin{aligned}J\left(w,\,b\right)= \dfrac{1}{m} \sum_{i=1}^{m} L\left(\hat{y}^{\left(i\right)},\,y^{\left(i\right)}\right)= -\dfrac{1}{m} \sum_{i=1}^{m} \left( y^{\left(i\right)}\log\hat{y}^{\left(i\right)} +\left(1-y^{\left(i\right)}\right) \log\left(1-\hat{y}^{\left(i\right)}\right) \right)\end{aligned}$
+**_Cost function:_** $\begin{aligned}J\left(w,\,b\right)= \dfrac{1}{m} \sum_{i=1}^{m} L\left(\hat{y}^{\left(i\right)},\,y^{\left(i\right)}\right)= -\dfrac{1}{m} \sum_{i=1}^{m} \left( y^{\left(i\right)}\log\hat{y}^{\left(i\right)} +\left(1-y^{\left(i\right)}\right) \log\left(1-\hat{y}^{\left(i\right)}\right) \right)\end{aligned}$
 
 Want to find $w, b$ to minimize $J\left(w,\,b\right)$.
 
@@ -62,7 +62,7 @@ Want to find $w, b$ to minimize $J\left(w,\,b\right)$.
 
 1. initialize **w, b**​ to **0​**
 
-2. iterate until **converge** to global optimum &emsp; ( ***J(w, b)*** *is convex )*
+2. iterate until **converge** to global optimum &emsp; ( **_J(w, b)_** _is convex )_
 
    $w:=w-\alpha \cdot \dfrac {\partial J\left( w,b\right)}{\partial w} \qquad b:=b-\alpha \cdot \dfrac {\partial J\left( w,b\right)}{\partial b}$
 
@@ -70,48 +70,46 @@ Want to find $w, b$ to minimize $J\left(w,\,b\right)$.
 
 $J\left(a,b,c\right) = \underbrace{3\,(\underbrace{a + \underbrace{bc}_{u\,=\,bc}}_{v\,=\,a+u})}_{J\,=\,3v}$
 
-- ***forward propagation*** → cost function
-  ![left-to-right](dl-su-2/fp.png)
+- **_forward propagation_** → cost function
+  ![left-to-right](Deep-Learning-Andrew-Ng-2/fp.png)
 
-- ***back propagation*** → derivatives
+- **_back propagation_** → derivatives
 
   Chain Rule: $\dfrac{dJ}{da} = \dfrac{dJ}{dv}\dfrac{dv}{da} = 3$, $\dfrac{dJ}{db} = \dfrac{dJ}{dv}\dfrac{dv}{du}\dfrac{du}{db} = 6$, $\dfrac{dJ}{dc} = \dfrac{dJ}{dv}\dfrac{dv}{du}\dfrac{du}{dc} = 9$
 
-  &emsp;&emsp;&emsp;&emsp;*p.s.* $\dfrac{d{\rm FinalOutputVar}}{d{\rm var}}$ in code is simplified as `dvar`, e.g., `dv = 3`, `da = 3`.
-  ![right-to-left](dl-su-2/bp.png)
+  &emsp;&emsp;&emsp;&emsp;_p.s._ $\dfrac{d{\rm FinalOutputVar}}{d{\rm var}}$ in code is simplified as `dvar`, e.g., `dv = 3`, `da = 3`.
+  ![right-to-left](Deep-Learning-Andrew-Ng-2/bp.png)
 
 #### Logistic Regression Gradient Descent
 
 $w_1 :=w_1 -\alpha \cdot dw_1 \qquad w_2 :=w_2 -\alpha \cdot dw_2 \qquad b:=b-\alpha \cdot db$
 
-![example](dl-su-2/lrgd.png)
+![example](Deep-Learning-Andrew-Ng-2/lrgd.png)
 
 #### Gradient Descent on m Examples
 
-$J\left(w,\,b\right)= \dfrac{1}{m} \sum_{i=1}^{m} L\left(a^{\left(i\right)},\,y^{\left(i\right)}\right)$
+$\begin{aligned} J\left(w,\,b\right) &= \dfrac{1}{m} \sum_{i=1}^{m} L\left(a^{\left(i\right)},\,y^{\left(i\right)}\right) \\ \dfrac{\partial}{\partial w_1} J\left(w,\,b\right) &= \dfrac{1}{m} \sum_{i=1}^{m}  \underbrace{\dfrac{\partial}{\partial w_1} L\left(a^{\left(i\right)},\,y^{\left(i\right)}\right)}_{dw_1^{\left(i\right)}} \end{aligned}$
 
-$\dfrac{\partial}{\partial w_1} J\left(w,\,b\right)= \dfrac{1}{m} \sum_{i=1}^{m}  \underbrace{\dfrac{\partial}{\partial w_1} L\left(a^{\left(i\right)},\,y^{\left(i\right)}\right)}_{dw_1^{\left(i\right)}}$
-
-##### Algorithm *(one step of gradient descent)*
+##### Algorithm _(one step of gradient descent)_
 
 $J=0; \ dw_1=0; \ dw_2=0; \ db=0$
 
 For $i=1$ to $m$
 &emsp;&emsp;$z^{\left(i\right)} = w^{\mathsf{T}} x^{\left(i\right)} +b$
 &emsp;&emsp;$a^{\left(i\right)} = \sigma \left( x^{\left(i\right)} \right)$
-&emsp;&emsp;$J +\!\!= - \left[ y^{\left(i\right)}\log a^{\left(i\right)} +\left(1-y^{\left(i\right)}\right) \log\left(1- a^{\left(i\right)}\right) \right]$
+&emsp;&emsp;$J +\\!\\!= - \left[ y^{\left(i\right)}\log a^{\left(i\right)} +\left(1-y^{\left(i\right)}\right) \log\left(1- a^{\left(i\right)}\right) \right]$
 &emsp;&emsp;$dz^{\left(i\right)} = a^{\left(i\right)} - y^{\left(i\right)}$
-&emsp;&emsp;$dw_1 +\!\!= x_1^{\left(i\right)} dz^{\left(i\right)}$
-&emsp;&emsp;$dw_2 +\!\!= x_2^{\left(i\right)} dz^{\left(i\right)}$&emsp;&emsp;&emsp;&emsp;*( n = 2 )*
-&emsp;&emsp;$db +\!\!= dz^{\left(i\right)}$
+&emsp;&emsp;$dw_1 +\\!\\!= x_1^{\left(i\right)} dz^{\left(i\right)}$
+&emsp;&emsp;$dw_2 +\\!\\!= x_2^{\left(i\right)} dz^{\left(i\right)}$&emsp;&emsp;&emsp;&emsp;_( n = 2 )_
+&emsp;&emsp;$db +\\!\\!= dz^{\left(i\right)}$
 
-$J /\!\!= m; \ w_1/\!\!= m; \ dw_2/\!\!= m; \ db/\!\!= m$
+$J /\\!\\!= m; \ w_1/\\!\\!= m; \ dw_2/\\!\\!= m; \ db/\\!\\!= m$
 
 $w_1 :=w_1 -\alpha \cdot dw_1 \\ w_2 :=w_2 -\alpha \cdot dw_2 \\ b:=b-\alpha \cdot db$
 
 **Weakness**
 
-- ***Efficiency:*** two for loops (m training samples, all features) → ***vectorization***
+- **_Efficiency:_** two for loops (m training samples, all features) → **_vectorization_**
 
 ### Python and Vectorization
 
@@ -136,21 +134,21 @@ z += b
 z = np.dot(w, x) + b
 ```
 
-*avoid using explicit for loops whenever possible*
+_avoid using explicit for loops whenever possible_
 
-##### Algorithm *(one for-loop)*
+##### Algorithm _(one for-loop)_
 
-$J=0; \ dw=np.zeros\left(n_x, 1\right); \ db=0$
+$J=0; \ dw=\texttt{np.zeros}\left(n_x, 1\right); \ db=0$
 
 For $i=1$ to $m$
 &emsp;&emsp;$z^{\left(i\right)} = w^{\mathsf{T}} x^{\left(i\right)} +b$
 &emsp;&emsp;$a^{\left(i\right)} = \sigma \left( x^{\left(i\right)} \right)$
-&emsp;&emsp;$J +\!\!= - \left[ y^{\left(i\right)}\log a^{\left(i\right)} +\left(1-y^{\left(i\right)}\right) \log\left(1- a^{\left(i\right)}\right) \right]$
+&emsp;&emsp;$J +\\!\\!= - \left[ y^{\left(i\right)}\log a^{\left(i\right)} +\left(1-y^{\left(i\right)}\right) \log\left(1- a^{\left(i\right)}\right) \right]$
 &emsp;&emsp;$dz^{\left(i\right)} = a^{\left(i\right)} - y^{\left(i\right)}$
-&emsp;&emsp;$dw +\!\!= x^{\left(i\right)} dz^{\left(i\right)}$
-&emsp;&emsp;$db +\!\!= dz^{\left(i\right)}$
+&emsp;&emsp;$dw +\\!\\!= x^{\left(i\right)} dz^{\left(i\right)}$
+&emsp;&emsp;$db +\\!\\!= dz^{\left(i\right)}$
 
-$J /\!\!= m; \ db/\!\!= m$
+$J /\\!\\!= m; \ db/\\!\\!= m$
 
 $w :=w -\alpha \cdot dw \\ b:=b-\alpha \cdot db$
 
@@ -187,7 +185,7 @@ db = np.sum(dZ) / m
 dw = np.dot(X, dZ.T) / m
 ```
 
-##### Algorithm *(vectorized)*
+##### Algorithm _(vectorized)_
 
 $\begin{aligned} & Z = w^{\mathsf{T}}X + b \\& A = \sigma\left(Z\right) \\& dZ = A -Y\end{aligned}$
 
@@ -195,11 +193,11 @@ $\begin{aligned}&dw =\dfrac{1}{m}\ X\ dZ^{\mathsf{T}} \\& db=\dfrac{1}{m} \sum ^
 
 $\begin{aligned}&w := w -\alpha \cdot dw \\& b :=b-\alpha \cdot db\end{aligned}$
 
-*still need a for loop to have iterations of gradient descent*
+_still need a for loop to have iterations of gradient descent_
 
 #### Explanation of Logistic Regression Cost Function
 
-***maximize:*** $\begin{aligned}\hat{y} = P\left(y=1\ |\ x\right)\end{aligned}$
+**_maximize:_** $\begin{aligned}\hat{y} = P\left(y=1\ |\ x\right)\end{aligned}$
 
 &emsp;&emsp;$\begin{aligned}\hat{y}= \sigma\left( w^{\mathsf{T}}x+b \right) \qquad \sigma\left( z \right)={\rm sigmoid}\left(z\right) = \dfrac{1} {1 + e^{-z}}\end{aligned}$
 
@@ -207,13 +205,13 @@ $\begin{aligned}&w := w -\alpha \cdot dw \\& b :=b-\alpha \cdot db\end{aligned}$
 
 &emsp;&emsp;$\begin{aligned}\log p\left(y|x\right) = \log\left( \hat{y}^y \left(1-\hat{y}\right)^{1-y}\right) =y\log\hat{y} +\left(1-y\right) \log\left(1-\hat{y}\right) \end{aligned}$
 
-***minimize:*** $\begin{aligned}L\left(\hat{y},\,y\right)=-\left( y\log\hat{y} +\left(1-y\right) \log\left(1-\hat{y}\right) \right)\end{aligned}$
+**_minimize:_** $\begin{aligned}L\left(\hat{y},\,y\right)=-\left( y\log\hat{y} +\left(1-y\right) \log\left(1-\hat{y}\right) \right)\end{aligned}$
 
 &emsp;&emsp;$\begin{aligned} p\left({\rm labels\ in\ training\ set}\right) = \prod_{i=1}^{m} p\left(y^{\left(i\right)}|x^{\left(i\right)}\right)\end{aligned}$
 
 &emsp;&emsp;$\begin{aligned} \log p\left({\rm labels\ in\ training\ set}\right) &= \log \left( \prod_{i=1}^{m} p\left(y^{\left(i\right)}|x^{\left(i\right)}\right) \right) \\ &= \sum_{i=1}^{m} \log\left(p\left(y^{\left(i\right)}|x^{\left(i\right)}\right)\right) \\ &= -\sum_{i=1}^{m}L\left(\hat{y}^{\left(i\right)},\,y^{\left(i\right)}\right) \end{aligned}$
 
-***minimize:*** $\begin{aligned} J\left(w,\,b\right)= \dfrac{1}{m} \sum_{i=1}^{m} L\left(\hat{y}^{\left(i\right)},\,y^{\left(i\right)}\right)\end{aligned}$
+**_minimize:_** $\begin{aligned} J\left(w,\,b\right)= \dfrac{1}{m} \sum_{i=1}^{m} L\left(\hat{y}^{\left(i\right)},\,y^{\left(i\right)}\right)\end{aligned}$
 
 ### Programming Assignments
 
@@ -221,6 +219,6 @@ $\begin{aligned}&w := w -\alpha \cdot dw \\& b :=b-\alpha \cdot db\end{aligned}$
 
 #### Logistic Regression with a Neural Network mindset
 
-<a href='https://github.com/bugstop/coursera-deep-learning-solutions' target="_blank">Solutions Manual</a>
+![example](Deep-Learning-Andrew-Ng-2/i.png)
 
-![example](dl-su-2/i.png)
+<a href='https://github.com/bugstop/coursera-deep-learning-solutions' target="_blank">Solutions Manual</a>

@@ -7,9 +7,9 @@ mathjax: true
 ---
 
 Deep Learning Specialization, Course A
-**Neural Networks and Deep Learning** by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+**Neural Networks and Deep Learning** by deeplearning.ai, **_Andrew Ng,_** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
-***Week 3:*** *Shallow Neural Networks*
+**_Week 3:_** _Shallow Neural Networks_
 
 1. Understand hidden units and hidden layers
 2. Be able to apply a variety of activation functions in a neural network.
@@ -24,14 +24,14 @@ Deep Learning Specialization, Course A
 
 #### Neural Networks Overview
 
-- ***n<sup>(i)</sup>:*** training samples
-- ***n<sup>[i]</sup>:*** layers
+- **_n<sup>(i)</sup>:_** training samples
+- **_n<sup>[i]</sup>:_** layers
 
-![overview](dl-su-3/intro.png)
+![overview](Deep-Learning-Andrew-Ng-3/intro.png)
 
 #### Neural Network Representation
 
-![overview](dl-su-3/layer.png)
+![overview](Deep-Learning-Andrew-Ng-3/layer.png)
 
 **2 Layer Neural Network**
 
@@ -69,15 +69,14 @@ $\begin{cases}\begin{aligned} & Z^\left[1\right] = W^\left[1\right] X + b^\left[
 
 #### Activation Functions
 
-- ***sigmoid:*** $a= \sigma \left(z\right) = \dfrac{1}{1+e^{-z}}$
+- **_sigmoid:_** $a= \sigma \left(z\right) = \dfrac{1}{1+e^{-z}}$
 
-- ***hyperbolic tangent:*** $a = \tanh\left(z\right) = \dfrac{e^z-e^{-z}}{e^z+e^{-z}}$&emsp;&emsp;zero mean
-  **hyperbolic tangent** is almost always ***strictly* superior** than **sigmoid** activation function except for the **output layer** of a **binary classification**
-  
-- ***rectified linear unit:*** $a= {\rm ReLU} \left(z\right) = \max\left(0,\,z\right)$&emsp;&emsp;derivative >> 0
+- **_hyperbolic tangent:_** $a = \tanh\left(z\right) = \dfrac{e^z-e^{-z}}{e^z+e^{-z}}$&emsp;&emsp;zero mean
+  **hyperbolic tangent** is almost always **_strictly_ superior** than **sigmoid** activation function except for the **output layer** of a **binary classification**
+- **_rectified linear unit:_** $a= {\rm ReLU} \left(z\right) = \max\left(0,\,z\right)$&emsp;&emsp;derivative >> 0
   **default,** most commonly used
 
-- ***leaky ReLU:*** $a= {\rm LeakyReLU} \left(z\right) = \max\left(\epsilon z,\,z\right), \quad \epsilon \ll 1,\ \sim 0.01 ^{\rm \ learning\ rate}$
+- **_leaky ReLU:_** $a= {\rm LeakyReLU} \left(z\right) = \max\left(\epsilon z,\,z\right), \quad \epsilon \ll 1,\ \sim 0.01 ^{\rm \ learning\ rate}$
 
 #### Why Need Non-Linear Activation Functions
 
@@ -85,9 +84,9 @@ if use linear activation functions (identity activation functions)
 
 $\begin{aligned}a^\left[1\right]=z^\left[1\right]&=W^\left[1\right]x+b^\left[1\right]\\a^\left[2\right]=z^\left[2\right]&=W^\left[2\right]a^\left[1\right]+b^\left[2\right]\\&=W^\left[2\right]\left(W^\left[1\right]x+b^\left[1\right]\right)+b^\left[2\right]\\&=\left(W^\left[2\right]W^\left[1\right]\right)x+\left(W^\left[2\right]b^\left[1\right]+b^\left[2\right]\right)\\&=W^\star x+b^\star\end{aligned}$
 
-$a^\left[i\right]$ is ***always linear***
+$a^\left[i\right]$ is **_always linear_**
 
-**do *not*** use **linear activation function** except for the **output layer** of a **regression** problem
+**do _not_** use **linear activation function** except for the **output layer** of a **regression** problem
 
 #### Derivatives of Activation Functions
 
@@ -97,7 +96,7 @@ $g\left(z\right) = \sigma \left(z\right) = \dfrac{1}{1+e^{-z}}$
 
 $g' \left(z\right) = \dfrac{d}{dz} g\left(z\right) = \dfrac{1}{1+e^{-z}}\left(1-\dfrac{1}{1+e^{-z}}\right) = \underbrace{ g\left(z\right)\left(1-g\left(z\right)\right)} _{=\,a\,\left(1-a\right)}$
 
-![sigmoid](dl-su-3/q5f2.png)
+![sigmoid](Deep-Learning-Andrew-Ng-3/q5f2.png)
 
 ##### Hyperbolic tangent activation functions
 
@@ -105,7 +104,7 @@ $g\left(z\right) = \tanh\left(z\right) = \dfrac{e^z-e^{-z}}{e^z+e^{-z}}$
 
 $g' \left(z\right) = \dfrac{d}{dz} g\left(z\right) = 1-\left( \tanh\left(z\right)\right)^2  = \underbrace{ 1-g^2 \left(z\right)} _{=\,1\,-\,a^2}$
 
-![tanh](dl-su-3/q5f1.png)
+![tanh](Deep-Learning-Andrew-Ng-3/q5f1.png)
 
 ##### ReLU activation functions
 
@@ -113,7 +112,7 @@ $g\left(z\right) =  {\rm ReLU} \left(z\right) = \max\left(0,\,z\right)$
 
 $g' \left(z\right) = \dfrac{d}{dz} g\left(z\right) = \begin{cases}0 \qquad {\rm if}\ \ z < 0 \\ 1 \qquad {\rm if}\ \ z \geq 0 \end{cases}$
 
-![relu](dl-su-3/q5f3.png)
+![relu](Deep-Learning-Andrew-Ng-3/q5f3.png)
 
 ##### Leaky-ReLU activation functions
 
@@ -121,16 +120,16 @@ $g\left(z\right) = {\rm LeakyReLU} \left(z\right) = \max\left(\epsilon z,\,z\rig
 
 $g' \left(z\right) = \dfrac{d}{dz} g\left(z\right) = \begin{cases}\epsilon \qquad {\rm if}\ \ z < 0 \\ 1 \qquad {\rm if}\ \ z \geq 0 \end{cases}$
 
-![lrelu](dl-su-3/q5f4.png)
+![lrelu](Deep-Learning-Andrew-Ng-3/q5f4.png)
 
 #### Gradient Descent for Neural Networks
 
-- ***Parameters:*** ${W^\left[1\right]}_{n^\left[1\right] \times n^\left[0\right]},\ {b^\left[1\right]}_{n^\left[1\right] \times 1},\ {W^\left[2\right]}_{n^\left[2\right] \times n^\left[1\right]},\ {b^\left[2\right]}_{n^\left[2\right] \times 1} \qquad n_x=n^\left[0\right],\ n^\left[1\right],\ n^\left[2\right]=1$
-- ***Cost Function:*** $J\left( {W^\left[1\right]},\ {b^\left[1\right]},\ {W^\left[2\right]},\ {b^\left[2\right]} \right) = \dfrac{1}{m} \sum_{i=1}^{m} L( \underbrace{\hat{y}^{\left(i\right)}}_{a^\left[2\right]},\,y^{\left(i\right)})$
+- **_Parameters:_** ${W^\left[1\right]}_{n^\left[1\right] \times n^\left[0\right]},\ {b^\left[1\right]}_{n^\left[1\right] \times 1},\ {W^\left[2\right]}_{n^\left[2\right] \times n^\left[1\right]},\ {b^\left[2\right]}_{n^\left[2\right] \times 1} \qquad n_x=n^\left[0\right],\ n^\left[1\right],\ n^\left[2\right]=1$
+- **_Cost Function:_** $\begin{aligned} J\left( {W^\left[1\right]},\ {b^\left[1\right]},\ {W^\left[2\right]},\ {b^\left[2\right]} \right) = \dfrac{1}{m} \sum_{i=1}^{m} L( \underbrace{\hat{y}^{\left(i\right)}}_{a^\left[2\right]},\,y^{\left(i\right)}) \end{aligned}$
 
 <sup>Gradient Decent</sup> Repeat:
 &emsp;&emsp;compute predictions $\hat{y}^{\left(i\right)}, \ \ i=1, \,\dots,\,m$
-&emsp;&emsp;compute derivatives  $dW^\left[1\right]=\dfrac{\partial J}{\partial W^\left[1\right]},\,db^\left[1\right]=\dfrac{\partial J}{\partial b^\left[1\right]},\,\dots$
+&emsp;&emsp;compute derivatives $dW^\left[1\right]=\dfrac{\partial J}{\partial W^\left[1\right]},\,db^\left[1\right]=\dfrac{\partial J}{\partial b^\left[1\right]},\,\dots$
 &emsp;&emsp;update $W^\left[1\right]:=W^\left[1\right]-\alpha dW^\left[1\right],\ \ b^\left[1\right]:=b^\left[1\right]-\alpha db^\left[1\right],\,\dots$
 
 ##### Formulas
@@ -141,12 +140,12 @@ $\begin{array}{lc|cl} \textsf{forward propagation} & \ & \quad & \textsf{back pr
 <!--| :----------------------------------------------------------: | :----------------------------------------------------------: |-->
 <!--| ${\begin{aligned} Z^\left[1\right] &= W^\left[1\right] X + b^\left[1\right] \\ A^\left[1\right] &= g^\left[1\right] \left(Z^\left[1\right] \right) \\ Z^\left[2\right] &= W^\left[2\right] A^\left[1\right]  + b^\left[2\right] \\ A^\left[2\right] &= g^\left[2\right] \left(Z^\left[2\right] \right) \end{aligned}}$ | $\begin{aligned} dZ^\left[2\right] &= A^\left[2\right] - Y \\ dW^\left[2\right] &= \dfrac{1}{m} dZ^\left[2\right] {A^\left[1\right]}^{\mathsf{T}} \\ db^\left[2\right] &= \dfrac{1}{m} \texttt{np.sum(} dZ^\left[2\right] \texttt{, axis=1, keepdims=True)} \\ dZ^\left[1\right] &= {W^\left[2\right]}^{\mathsf{T}} dZ^\left[2\right]\odot g' ^\left[1\right] \left(Z^\left[1\right]\right)  \\ dW^\left[1\right] &= \dfrac{1}{m} dZ^\left[1\right] {X}^{\mathsf{T}} \\ db^\left[1\right] &= \dfrac{1}{m} \texttt{np.sum(} dZ^\left[1\right] \texttt{, axis=1, keepdims=True)} \end{aligned}$ |-->
 
-&emsp;&emsp;***Notice:*** $\odot$ represents **element-wise** product
+&emsp;&emsp;**_Notice:_** $\odot$ represents **element-wise** product
 
 #### Backpropagation Intuition
 
-![1](dl-su-3/1.png)
-![2](dl-su-3/2.png)
+![1](Deep-Learning-Andrew-Ng-3/1.png)
+![2](Deep-Learning-Andrew-Ng-3/2.png)
 
 $z^\left[1\right] \rightarrow a^\left[1\right] \rightarrow  z^\left[2\right] \rightarrow a^\left[2\right] \rightarrow L$
 
@@ -159,13 +158,13 @@ $dZ^\left[2\right]=A^\left[2\right] -Y \rightarrow \begin{aligned} dW^\left[2\ri
 
 #### Random Initialization
 
-![init](dl-su-3/i.png)
+![init](Deep-Learning-Andrew-Ng-3/i.png)
 
 ##### Zero initialization
 
 $\begin{aligned}W^\left[1\right] &= \left[ \begin{matrix} 0 & 0 \\ 0 & 0 \end{matrix} \right]\\ W^\left[2\right] &= \left[ \begin{matrix} 0 & 0 \end{matrix} \right] \end{aligned} \Rightarrow a^\left[1\right]_1 = a^\left[1\right]_2 \Rightarrow dz^\left[1\right]_1 = dz^\left[1\right]_2 \Rightarrow W^\left[1\right] = \left[ \begin{matrix} a & b \\ a & b \end{matrix} \right]  \Rightarrow \cdots \Rightarrow W^\left[1\right] = \left[ \begin{matrix} a' & b' \\ a' & b' \end{matrix} \right] $
 
-&emsp;&emsp;get **all hidden units** computing exactly ***same*** function
+&emsp;&emsp;get **all hidden units** computing exactly **_same_** function
 
 ##### Random initialization
 
@@ -173,7 +172,7 @@ $ \begin{aligned} W^\left[1\right] &= \texttt{np.random.rand((2, 2)) }\star\text
 
 **why `* 0.01` in shallow neural network**
 
-![init](dl-su-3/w.png)
+![init](Deep-Learning-Andrew-Ng-3/w.png)
 
 ### Programming Assignments
 

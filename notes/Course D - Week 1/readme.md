@@ -7,9 +7,9 @@ mathjax: true
 ---
 
 Deep Learning Specialization, Course D
-**Convolutional Neural Networks** by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+**Convolutional Neural Networks** by deeplearning.ai, **_Andrew Ng,_** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
-***Week 1:*** *Foundations of Convolutional Neural Networks*
+**_Week 1:_** _Foundations of Convolutional Neural Networks_
 
 1. Understand the convolution operation
 2. Understand the pooling operation
@@ -26,15 +26,15 @@ large images → convolution operation
 
 #### Edge Detection Example
 
-![edges](dl-su-10/1.png)
+![edges](Deep-Learning-Andrew-Ng-10/1.png)
 
 ##### Edges Detection
 
-***Pooling:*** **convolution (cross-correlation),** *filter (kernel)*
+**_Pooling:_** **convolution (cross-correlation),** _filter (kernel)_
 
-![edges](dl-su-10/2.gif)
+![edges](Deep-Learning-Andrew-Ng-10/2.gif)
 
-![v](dl-su-10/3.png)
+![v](Deep-Learning-Andrew-Ng-10/3.png)
 
 #### More Edge Detection
 
@@ -49,48 +49,47 @@ $\ast \left[ {\begin{matrix}w_1&w_2&w_3 \\ w_4&w_5&w_6 \\ w_7&w_8&w_9 \end{matri
 - shrink output (n-f+1 × n-f+1) → (n+2p-f+1 × n+2p-f+1)
 - throw away info from edges
 
-![p](dl-su-10/4.png)
+![p](Deep-Learning-Andrew-Ng-10/4.png)
 
-**Valid and Same convolution**  
+**Valid and Same convolution**
 
-- ***valid:*** no padding &emsp; $n \ast f \rightarrow n-f+1$
-- ***same:*** pad so that output size is the same as the input size &emsp; $p=(f-1)/2$ &emsp; *(f is usually odd)*
+- **_valid:_** no padding &emsp; $n \ast f \rightarrow n-f+1$
+- **_same:_** pad so that output size is the same as the input size &emsp; $p=(f-1)/2$ &emsp; _(f is usually odd)_
 
 #### Strided Convolutions
 
-![s](dl-su-10/5.png)
+![s](Deep-Learning-Andrew-Ng-10/5.png)
 
 $n \ast f \xrightarrow{ {\rm padding}=p,\ {\rm stride}=s } \left\lfloor \dfrac{n+2p-f}{s}+1 \right\rfloor$
 
 #### Convolutions Over Volume
 
-![v](dl-su-10/6.png)
+![v](Deep-Learning-Andrew-Ng-10/6.png)
 
-![m](dl-su-10/7.png)
+![m](Deep-Learning-Andrew-Ng-10/7.png)
 
 $\Rightarrow \ n \times n \times n_{channel} \quad\ast\quad f \times f \times n_{channel} \quad=\quad n\\!\\!-\\!\\!f\\!\\!+\\!\\!1 \times n\\!\\!-\\!\\!f\\!\\!+\\!\\!1 \times n_{filter}$
 
 #### One Layer of a Convolutional Network
 
-![l](dl-su-10/8.png)
+![l](Deep-Learning-Andrew-Ng-10/8.png)
 
-- ***filter size:*** f<sup>[l]</sup>
-- ***padding:*** p<sup>[l]</sup>
-- ***stride:*** s<sup>[l]</sup>
-- ***number of filters:*** n<sub>c</sub><sup>[l]</sup>
+- **_filter size:_** f<sup>[l]</sup>
+- **_padding:_** p<sup>[l]</sup>
+- **_stride:_** s<sup>[l]</sup>
+- **_number of filters:_** n<sub>c</sub><sup>[l]</sup>
 
-
-- ***filter:*** f<sup>[l]</sup> × f<sup>[l]</sup> × n<sub>c</sub><sup>[l-1]</sup>
-- ***weights:*** f<sup>[l]</sup> × f<sup>[l]</sup> × n<sub>c</sub><sup>[l-1]</sup> × n<sub>c</sub><sup>[l]</sup>
-- ***bias:*** 1 × 1× 1× n<sub>c</sub><sup>[l]</sup>
-- ***activations:*** n<sub>H</sub><sup>[l]</sup> × n<sub>W</sub><sup>[l]</sup> × n<sub>c</sub><sup>[l]</sup>
-- ***input:*** n<sub>H</sub><sup>[l-1]</sup> × n<sub>W</sub><sup>[l-1]</sup> × n<sub>c</sub><sup>[l-1]</sup>
-- ***output:*** *(m ×)* n<sub>H</sub><sup>[l]</sup> × n<sub>W</sub><sup>[l]</sup> × n<sub>c</sub><sup>[l]</sup>  
+- **_filter:_** f<sup>[l]</sup> × f<sup>[l]</sup> × n<sub>c</sub><sup>[l-1]</sup>
+- **_weights:_** f<sup>[l]</sup> × f<sup>[l]</sup> × n<sub>c</sub><sup>[l-1]</sup> × n<sub>c</sub><sup>[l]</sup>
+- **_bias:_** 1 × 1× 1× n<sub>c</sub><sup>[l]</sup>
+- **_activations:_** n<sub>H</sub><sup>[l]</sup> × n<sub>W</sub><sup>[l]</sup> × n<sub>c</sub><sup>[l]</sup>
+- **_input:_** n<sub>H</sub><sup>[l-1]</sup> × n<sub>W</sub><sup>[l-1]</sup> × n<sub>c</sub><sup>[l-1]</sup>
+- **_output:_** _(m ×)_ n<sub>H</sub><sup>[l]</sup> × n<sub>W</sub><sup>[l]</sup> × n<sub>c</sub><sup>[l]</sup>  
   $\begin{aligned} n_H^{\left[l\right]} &= \left\lfloor \dfrac{n_H^{\left[l-1\right]} +2p^{\left[l\right]} -f^{\left[l\right]}} {s^{\left[l\right]}} +1 \right\rfloor ^{\strut} \\ n_W^{\left[l\right]} &= \left\lfloor \dfrac{n_W^{\left[l-1\right]} +2p^{\left[l\right]} -f^{\left[l\right]}} {s^{\left[l\right]}} +1 \right\rfloor ^{\strut} \end{aligned}$
 
 #### Simple Convolutional Network Example
 
-![ConvNet](dl-su-10/9.png)
+![ConvNet](Deep-Learning-Andrew-Ng-10/9.png)
 
 ##### Types of Layers in a ConvNet
 
@@ -102,9 +101,9 @@ $\Rightarrow \ n \times n \times n_{channel} \quad\ast\quad f \times f \times n_
 
 ##### Max Pooling
 
-> *feature detected?*
+> _feature detected?_
 
-![mp](dl-su-10/10.png)
+![mp](Deep-Learning-Andrew-Ng-10/10.png)
 
 perform the computation on each of the channels independently
 
@@ -114,16 +113,16 @@ use average pooling to collapse representation
 
 ##### Hyperparameters
 
-- ***f:*** filter size
-- ***s:*** stride
-- ***max / average***
-- ~~***p:*** padding~~
+- **_f:_** filter size
+- **_s:_** stride
+- **_max / average_**
+- ~~**_p:_** padding~~
 
 **NO PARAMETERS TO LEARN**
 
 #### CNN Example
 
-![cnn](dl-su-10/11.png)
+![cnn](Deep-Learning-Andrew-Ng-10/11.png)
 
 |             | Activation Shape | Activation Size | \# Parameters |
 | :---------: | :--------------: | :-------------: | :-----------: |
@@ -138,9 +137,9 @@ use average pooling to collapse representation
 
 #### Why Convolutions
 
-- ***Parameter Sharing:*** a feature detector (such as edge detector) that is useful in one part of the image is probably useful in another part of the image
-- ***Sparsity of Connections:*** in each layer, each output value depends on only a small number of inputs
-- ***Translation Invariance:*** applying same filter to better capture the property of translation invariance
+- **_Parameter Sharing:_** a feature detector (such as edge detector) that is useful in one part of the image is probably useful in another part of the image
+- **_Sparsity of Connections:_** in each layer, each output value depends on only a small number of inputs
+- **_Translation Invariance:_** applying same filter to better capture the property of translation invariance
 
 ${\rm Cost} \ \ \begin{aligned} J = \dfrac{1}{m} \sum_{i=1}^{m} L\left(\hat{y}^{\left(i\right)},\,y^{\left(i\right)}\right) \end{aligned}$  
 use gradient descent (or momentum, ...) to optimize parameters to reduce J
@@ -149,10 +148,10 @@ use gradient descent (or momentum, ...) to optimize parameters to reduce J
 
 #### Convolutional Model: step by step
 
-![1](/dl-su-10/12.png)
+![1](/Deep-Learning-Andrew-Ng-10/12.png)
 
 #### Convolutional Model: application
 
-![2](/dl-su-10/13.png)
+![2](/Deep-Learning-Andrew-Ng-10/13.png)
 
 <a href='https://github.com/bugstop/coursera-deep-learning-solutions' target="_blank">Solutions Manual</a>

@@ -8,9 +8,9 @@ mathjax: true
 
 Deep Learning Specialization, Course B
 **Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization**
-by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+by deeplearning.ai, **_Andrew Ng,_** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
-***Week 1:*** *Practical Aspects of Deep Learning*
+**_Week 1:_** _Practical Aspects of Deep Learning_
 
 1. Recall that different types of initializations lead to different results
 2. Recognize the importance of initialization in complex neural networks.
@@ -28,7 +28,7 @@ by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/
 
 learning rate, \# iterations, \# hidden units, activation function, ...
 
-![set](dl-su-5/tdt.png)
+![set](Deep-Learning-Andrew-Ng-5/tdt.png)
 
 **Size**
 
@@ -42,9 +42,9 @@ learning rate, \# iterations, \# hidden units, activation function, ...
 
 #### Bias / Variance
 
-![set](dl-su-5/c.png)
+![set](Deep-Learning-Andrew-Ng-5/c.png)
 
-![set](dl-su-5/h.png)
+![set](Deep-Learning-Andrew-Ng-5/h.png)
 
 #### Basic Recipe for Machine Learning
 
@@ -66,7 +66,7 @@ $\min_{w,b}J\left(w,b\right) \qquad w \in \mathbb{R}^{n_x}, \ b \in \mathbb{R}$
 
 $\begin{aligned} J\left(w,b\right) = \dfrac{1}{m} \sum_{i=1}^{m} L\left( \hat{y} ^\left(i\right),\, y^\left(i\right) \right) &+ \dfrac{\lambda}{2m} \left|\left| w \right| \right| ^2 \quad \color{lightgray} { \overbrace{ + \dfrac{\lambda}{2m} b^2} ^{\rm omit} }\\ L_2 \textsf{ Regulariztion} \qquad \left|\left| w \right| \right| ^2 &= \sum_{j=1}^{n_x} w_j^2 = w^{\mathsf{T}} w \end{aligned}$
 
-- ***λ:*** regularization parameter
+- **_λ:_** regularization parameter
 
 ##### Neural Network
 
@@ -79,13 +79,13 @@ $\begin{aligned} dW^\left[l\right] &= \overbrace{\dfrac{1}{m} \, dZ^\left[l\righ
 #### Why Regularization Reduces Overfitting?
 
 - variance reduction
-  ![1](dl-su-5/ou.png)
-- g(z) *(every layer)* is roughly linear
-  ![2](dl-su-5/1.png)
+  ![1](Deep-Learning-Andrew-Ng-5/ou.png)
+- g(z) _(every layer)_ is roughly linear
+  ![2](Deep-Learning-Andrew-Ng-5/1.png)
 
 #### Dropout Regularization
 
-![dropout](dl-su-5/d.png)
+![dropout](Deep-Learning-Andrew-Ng-5/d.png)
 
 **Inverted Dropout**
 
@@ -97,18 +97,18 @@ a3 = a3 * d3
 a3 /= keep_prob  # expected value of a3 remains the same
 ```
 
-***Notice:*** do not use dropout at test time
+**_Notice:_** do not use dropout at test time
 
 #### Understanding Dropout
 
-***Intuition:*** can't rely on any *one* feature, so have to spread out weights
+**_Intuition:_** can't rely on any _one_ feature, so have to spread out weights
 **shrink the squared norm of the weights**
 
 #### Other Regularization Methods
 
 - data augmentation
 - early stopping
-  ![es](dl-su-5/s.png)
+  ![es](Deep-Learning-Andrew-Ng-5/s.png)
   **Orthorganization**
   - Optimize cost function $J$
   - Not overfit
@@ -124,11 +124,11 @@ a3 /= keep_prob  # expected value of a3 remains the same
 3. use same μ, σ<sup>2</sup> to normalize test set
    $x := \dfrac{x- \mu}{\sigma}$
 
-![c](dl-su-5/4.png)
+![c](Deep-Learning-Andrew-Ng-5/4.png)
 
 #### Vanishing / Exploding Gradients
 
-![c](dl-su-5/x.png)
+![c](Deep-Learning-Andrew-Ng-5/x.png)
 
 $W^{\left[1\right]},\ W^{\left[2\right]},\ W^{\left[3\right]},\ \dots, \ W^{\left[L\right]} \qquad {\rm set} \ \ g\left(z\right)=z, \ b^{\left[l\right]} =0$
 
@@ -136,13 +136,13 @@ $\Rightarrow y= W^{\left[L\right]}W^{\left[L-1\right]}W^{\left[L-2\right]}\cdots
 
 $\begin{aligned} {\rm assume} \ \ W^{\left[l\right]}= \left[ \begin{matrix} 1.5&0\\0&1.5 \end{matrix} \right], \qquad \ \ &y= W^{\left[L\right]} \left[ \begin{matrix} 1.5&0\\0&1.5 \end{matrix} \right] ^{L-1} x \quad \sim 1.5^L \\ {\rm assume} \ \ W^{\left[l\right]}= \left[ \begin{matrix} 0.5&0\\0&0.5 \end{matrix} \right], \qquad \ \ &y= W^{\left[L\right]} \left[ \begin{matrix} 0.5&0\\0&0.5 \end{matrix} \right] ^{L-1} x \quad \sim 0.5^L \end{aligned}$
 
-**activations** and **gradients** increasing or decreasing ***exponentially*** as a function of **L**
+**activations** and **gradients** increasing or decreasing **_exponentially_** as a function of **L**
 
 #### Weight Initialization for Deep Networks
 
 ##### Single Neuron
 
-![single](dl-su-5/sn.png)
+![single](Deep-Learning-Andrew-Ng-5/sn.png)
 
 $z= w_1x_1 + w_2x_2 + \dots + w_nx_n \ \ \color{lightgray} {+ b}$
 
@@ -162,7 +162,7 @@ $\begin{aligned} & f'\left(\theta\right) = \lim_{\epsilon\rightarrow 0} \dfrac{f
 
 2. take $dW^{\left[1\right]},db^{\left[1\right]}, \dots,dW^{\left[L\right]},db^{\left[L\right]}$ and reshape into a big vector $d\Theta$
 
-3. ***grad check:*** is $d\Theta$ the gradient of the cos function $J\left(\Theta\right)=J\left(\theta_1,\theta_2,\dots\right)$
+3. **_grad check:_** is $d\Theta$ the gradient of the cos function $J\left(\Theta\right)=J\left(\theta_1,\theta_2,\dots\right)$
 
    $\begin{aligned}\texttt{for each i:} & \\ \qquad d\theta_{approx}^{\left[i\right]} &= \dfrac{J\left(\theta_1,\theta_i+\epsilon,\dots,\theta_2,\dots\right)-J\left(\theta_1,\theta_i-\epsilon,\dots,\theta_2,\dots\right)}{2\epsilon} \\ &\approx d\theta^{\left[i\right]}=\dfrac{\partial J}{\partial \theta_i} \qquad\qquad\qquad\qquad \epsilon\sim 10^{-7} \end{aligned}$
 
@@ -182,14 +182,14 @@ $\begin{aligned} & f'\left(\theta\right) = \lim_{\epsilon\rightarrow 0} \dfrac{f
 
 #### Initialization
 
-![](dl-su-5/p1.png)
+![](Deep-Learning-Andrew-Ng-5/p1.png)
 
 #### Regularization
 
-![](dl-su-5/p2.png)
+![](Deep-Learning-Andrew-Ng-5/p2.png)
 
 #### Gradient Checking
 
-![](dl-su-5/p3.png)
+![](Deep-Learning-Andrew-Ng-5/p3.png)
 
 <a href='https://github.com/bugstop/coursera-deep-learning-solutions' target="_blank">Solutions Manual</a>

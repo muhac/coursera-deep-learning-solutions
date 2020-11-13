@@ -7,9 +7,9 @@ mathjax: true
 ---
 
 Deep Learning Specialization, Course A
-**Neural Networks and Deep Learning** by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+**Neural Networks and Deep Learning** by deeplearning.ai, **_Andrew Ng,_** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
-***Week 4:*** *Deep Neural Networks*
+**_Week 4:_** _Deep Neural Networks_
 
 1. See deep neural networks as successive blocks put one after each other
 2. Build and train a deep L-layer Neural Network
@@ -23,15 +23,15 @@ Deep Learning Specialization, Course A
 
 #### Deep L-Layer neural network
 
-![L](dl-su-4/l.png)
+![L](Deep-Learning-Andrew-Ng-4/l.png)
 
-- ***L:*** number of layers
-- ***n<sup>[l]</sup>:*** number of units in layer l
-- ***a<sup>[l]</sup> = g<sup>[l]</sup>(z<sup>[l]</sup>):*** activations in layer l
-- ***W<sup>[l]</sup>:*** weights for z<sup>[l]</sup>
-- ***b<sup>[l]</sup>:*** biases for z<sup>[l]</sup>
+- **_L:_** number of layers
+- **_n<sup>[l]</sup>:_** number of units in layer l
+- **_a<sup>[l]</sup> = g<sup>[l]</sup>(z<sup>[l]</sup>):_** activations in layer l
+- **_W<sup>[l]</sup>:_** weights for z<sup>[l]</sup>
+- **_b<sup>[l]</sup>:_** biases for z<sup>[l]</sup>
 
-![L=4](dl-su-4/4.png)
+![L=4](Deep-Learning-Andrew-Ng-4/4.png)
 
 $n^{\left[0\right]} = n_x = 3, \ n^{\left[1\right]} = 5, \ n^{\left[2\right]} = 5, \ n^{\left[3\right]} = 3, \ n^{\left[4\right]} = n^{\left[L\right]} = 1 $
 
@@ -49,7 +49,7 @@ $\Rightarrow \begin{cases} \begin{aligned} Z^{\left[l\right]}&=W^{\left[l\right]
 
 #### Getting Your Matrix Dimensions Right
 
-![L=5](dl-su-4/5.png)
+![L=5](Deep-Learning-Andrew-Ng-4/5.png)
 
 $n_x=n^{\left[0\right]} = 2, \ n^{\left[1\right]} = 3, \ n^{\left[2\right]} = 5, \ n^{\left[3\right]} = 4, \ n^{\left[4\right]} = 2, \ n^{\left[5\right]} = 1 \ $
 
@@ -59,11 +59,11 @@ $\left. \begin{aligned} \overbrace{ z^{\left[1\right]} }^{n^{\left[1\right]} \ti
 
 **one layer**
 
-![one layer](dl-su-4/b.png)
+![one layer](Deep-Learning-Andrew-Ng-4/b.png)
 
 **one iteration**
 
-![one iteration](dl-su-4/bl.png)
+![one iteration](Deep-Learning-Andrew-Ng-4/bl.png)
 
 #### Forward and Backward Propagation
 
@@ -88,8 +88,8 @@ $\begin{aligned} a^\left[0\right] &= x \qquad & A^\left[0\right] &= X \\ da^\lef
 #### Parameters vs Hyperparameters
 
 - **Parameters**
-  - W<sup>[1]</sup>, b<sup>[1]</sup>, W<sup>[2]</sup>, b<sup>[2]</sup>, ...
 
+  - W<sup>[1]</sup>, b<sup>[1]</sup>, W<sup>[2]</sup>, b<sup>[2]</sup>, ...
 
 - **Hyperparameters**
   - learning rate α
@@ -98,17 +98,17 @@ $\begin{aligned} a^\left[0\right] &= x \qquad & A^\left[0\right] &= X \\ da^\lef
   - \# hidden units n<sup>[1]</sup>, n<sup>[2]</sup>, ...
   - activation function
   - momentum
-  -  mini batch size
+  - mini batch size
   - regularization parameters
 
 ### Programming Assignments
 
 #### Building your Deep Neural Network: Step by Step
 
-![example](dl-su-4/1.png)
+![example](Deep-Learning-Andrew-Ng-4/1.png)
 
 #### Deep Neural Network - Application
 
-![example](dl-su-4/2.png)
+![example](Deep-Learning-Andrew-Ng-4/2.png)
 
 <a href='https://github.com/bugstop/coursera-deep-learning-solutions' target="_blank">Solutions Manual</a>

@@ -7,9 +7,9 @@ mathjax: true
 ---
 
 Deep Learning Specialization, Course E
-**Sequence Models** by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+**Sequence Models** by deeplearning.ai, **_Andrew Ng,_** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
-***Week 2:*** *Natural Language Processing & Word Embeddings*
+**_Week 2:_** _Natural Language Processing & Word Embeddings_
 
 1. Natural language processing with deep learning is an important combination. Using word vector representations and embedding layers you can train recurrent neural networks with outstanding performances in a wide variety of industries. Examples of applications are sentiment analysis, named entity recognition and machine translation.
 
@@ -19,47 +19,47 @@ Deep Learning Specialization, Course E
 
 #### Word Representation
 
-*the inner product between any two different **one-hot** vector is zero*
+_the inner product between any two different **one-hot** vector is zero_
 
-![](dl-su-15/1.png)
+![](Deep-Learning-Andrew-Ng-15/1.png)
 
 ##### t-SNE
 
 visualize word embeddings
 
-![](dl-su-15/2.png)
+![](Deep-Learning-Andrew-Ng-15/2.png)
 
 #### Using Word Embeddings
 
-1. Learning word embeddings from large text corpus, or download pretrained embedding online. *(1-100B words)*
-2. Transfer embedding to new task with smaller training set. *(~100k words)*
-3. *Optional:* Continue to finetune the word embeddings with new data.
+1. Learning word embeddings from large text corpus, or download pretrained embedding online. _(1-100B words)_
+2. Transfer embedding to new task with smaller training set. _(~100k words)_
+3. _Optional:_ Continue to finetune the word embeddings with new data.
 
 #### Properties of Word Embeddings
 
 $\begin{aligned}& \\!\\!\\!\\!\\! \textsf{Man} \rightarrow \textsf{Woman  as  King} \rightarrow \underline{\rm Queen} \\ e_{man} &- e_{woman} \approx \left[\begin{matrix} -2\\0\\0\\0 \end{matrix}\right] \approx e_{king} - e_{queen} \end{aligned}$
 
-![](dl-su-15/3.png)
+![](Deep-Learning-Andrew-Ng-15/3.png)
 
 find word w: ${\rm argmax}\ {\rm sim} \left(e_w, \ e_{king} - e_{man} + e_{woman} \right) \qquad {\rm sim}\left(u,v\right) = \dfrac{u^{\mathsf{T}}v} {\left\|u\right\|_2\left\|v\right\|_2}$
 
 #### Embedding Matrix
 
-- ***E:*** embedding matrix
-- ***o:*** one-hot vector
-- ***e:*** embedding vector
+- **_E:_** embedding matrix
+- **_o:_** one-hot vector
+- **_e:_** embedding vector
 
 $E_{300\times10000}\cdot o_{10000\times1} = \left[\begin{matrix} a&aaron&\cdots&orange&\cdots&zulu \\ \\ \\ &&&E \\ \\ \\ \end{matrix}\right] \left[\begin{matrix} 0\\0\\\vdots\\1\\\vdots\\0 \end{matrix}\right] = e_{300\times1} $
 
-*use embedding layer to call out the column instead of a matrix vector multiplication*
+_use embedding layer to call out the column instead of a matrix vector multiplication_
 
 ### Learning Word Embeddings: Word2Vec & GloVe
 
 #### Learning Word Embeddings
 
-![](dl-su-15/4.png)
+![](Deep-Learning-Andrew-Ng-15/4.png)
 
-![](dl-su-15/5.png)
+![](Deep-Learning-Andrew-Ng-15/5.png)
 
 #### Word2Vec
 
@@ -69,21 +69,21 @@ $\begin{aligned} & \Rightarrow \quad \textrm{I want a glass of orange juice to g
 
 **Problems**
 
-- ***softmax is slow***
+- **_softmax is slow_**
 
   - hierarchical softmax classifier
 
-    ![](dl-su-15/6.png)
+    ![](Deep-Learning-Andrew-Ng-15/6.png)
 
-- ***how to sample the context c***
+- **_how to sample the context c_**
 
-  - uniformly random → *the, of, a, and, to, ...*
+  - uniformly random → _the, of, a, and, to, ..._
   - **heuristics**
 
 #### Negative Sampling
 
 **Generate Negative Samples**
-pick ***k*** target words from the dictionary ***randomly*** and label all those ***0***
+pick **_k_** target words from the dictionary **_randomly_** and label all those **_0_**
 
 $P\left(\omega_i\right) = \dfrac{f\left(\omega_i\right)^{3/4}}{\sum_j f\left(\omega_j\right)^{3/4}} \qquad f \textsf{: frequency of word}$
 
@@ -103,11 +103,11 @@ $\begin{aligned} {\rm minimize} \ & \sum_i \sum_j f\left(X_{ij}\right) \left( \t
 
 #### Sentiment Classification
 
-***small training sets***
+**_small training sets_**
 
-![](dl-su-15/7.png)
+![](Deep-Learning-Andrew-Ng-15/7.png)
 
-![](dl-su-15/8.png)
+![](Deep-Learning-Andrew-Ng-15/8.png)
 
 #### Debiasing Word Embeddings
 
@@ -115,28 +115,28 @@ $\begin{aligned} {\rm minimize} \ & \sum_i \sum_j f\left(X_{ij}\right) \left( \t
 - Man: Computer_Programmer as Woman: Homemaker
 - Father: Doctor as Mother: Nurse
 
-*Word embeddings can reflect gender, ethnicity, age, sexual orientation, and other biases of the text used to train the model.*
+_Word embeddings can reflect gender, ethnicity, age, sexual orientation, and other biases of the text used to train the model._
 
 1. **Identify bias direction.**
 
-   ${\rm average} \begin{cases}e_{he}-e_{she} \\ e_{male}-e_{female} \\\cdots \end{cases} \qquad$*( SVU, singular value decomposition )*
+   ${\rm average} \begin{cases}e_{he}-e_{she} \\ e_{male}-e_{female} \\\cdots \end{cases} \qquad$_( SVU, singular value decomposition )_
 
 2. **Neutralize: for every word that is not definitional, project to get rid of bias.**
 
 3. **Equalize pairs.**
 
-![](dl-su-15/9.png)
+![](Deep-Learning-Andrew-Ng-15/9.png)
 
 ### Programming Assignments
 
 #### Operations on Word Vectors - Debiasing
 
-![](/dl-su-15/10.png)
+![](/Deep-Learning-Andrew-Ng-15/10.png)
 
 #### Emojify
 
-![](/dl-su-15/11.png)
+![](/Deep-Learning-Andrew-Ng-15/11.png)
 
-![](/dl-su-15/12.png)
+![](/Deep-Learning-Andrew-Ng-15/12.png)
 
 <a href='https://github.com/bugstop/coursera-deep-learning-solutions' target="_blank">Solutions Manual</a>

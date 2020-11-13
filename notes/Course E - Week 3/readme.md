@@ -7,9 +7,9 @@ mathjax: true
 ---
 
 Deep Learning Specialization, Course E
-**Sequence Models** by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+**Sequence Models** by deeplearning.ai, **_Andrew Ng,_** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
-***Week 3:*** *Sequence Models & Attention Mechanism*
+**_Week 3:_** _Sequence Models & Attention Mechanism_
 
 1. Sequence models can be augmented using an attention mechanism. This algorithm will help your model understand where it should focus its attention given a sequence of inputs. This week, you will also learn about speech recognition and how to deal with audio data.
 
@@ -19,9 +19,9 @@ Deep Learning Specialization, Course E
 
 #### Basic Models
 
-![](dl-su-16/1.png)
+![](Deep-Learning-Andrew-Ng-16/1.png)
 
-![](dl-su-16/2.png)
+![](Deep-Learning-Andrew-Ng-16/2.png)
 
 #### Picking the Most Likely Sentence
 
@@ -31,13 +31,13 @@ $P\left(y^{\left\lt 1 \right\gt},\,\dots,\,y^{\left\lt T_y \right\gt} | x^{\left
 
 ${\rm argmax}_{y^{\left\lt 1 \right\gt},\,\dots,\,y^{\left\lt T_y \right\gt}} P\left(y^{\left\lt 1 \right\gt},\,\dots,\,y^{\left\lt T_y \right\gt} | x\right)$
 
-![](dl-su-16/3.png)
+![](Deep-Learning-Andrew-Ng-16/3.png)
 
 #### Beam Search
 
-![](dl-su-16/4.png)
+![](Deep-Learning-Andrew-Ng-16/4.png)
 
-![](dl-su-16/5.png)
+![](Deep-Learning-Andrew-Ng-16/5.png)
 
 #### Refinements to Beam Search
 
@@ -45,7 +45,7 @@ ${\rm argmax}_{y^{\left\lt 1 \right\gt},\,\dots,\,y^{\left\lt T_y \right\gt}} P\
 
 $\begin{aligned} & {\rm argmax}_y \prod_{t=1}^{T_y}  P\left(y^{\left\lt t \right\gt} | x,\,y^{\left\lt 1 \right\gt},\,\dots,\, y^{\left\lt t-1 \right\gt}\right) & \textsf{ numerical underflow} \\ \Rightarrow \ & {\rm argmax}_y \sum_{t=1}^{T_y} \log P\left(y^{\left\lt t \right\gt} | x,\,y^{\left\lt 1 \right\gt},\,\dots,\, y^{\left\lt t-1 \right\gt}\right) & \textsf{short sentences} \\ \Rightarrow \ & {\rm argmax}_y \dfrac{1}{T_y^{\,\alpha}} \sum_{t=1}^{T_y} \log P\left(y^{\left\lt t \right\gt} | x,\,y^{\left\lt 1 \right\gt},\,\dots,\, y^{\left\lt t-1 \right\gt}\right) & \alpha \sim 0.7 \qquad \qquad \qquad \end{aligned}$
 
-- ***Beam Width***
+- **_Beam Width_**
   - large B: better result, slower
   - small B: worse result, faster
 
@@ -53,8 +53,8 @@ $\begin{aligned} & {\rm argmax}_y \prod_{t=1}^{T_y}  P\left(y^{\left\lt t \right
 
 - **Jane visite l'Afrique en septembre.** $\quad x$
 
-  - ***Human:*** Jane visits Africa in September. $\quad y^\star$
-  - ***Algorithm:***  Jane visited Africa last September. $\quad \hat{y}$
+  - **_Human:_** Jane visits Africa in September. $\quad y^\star$
+  - **_Algorithm:_** Jane visited Africa last September. $\quad \hat{y}$
 
 - **RNN / Bean Search**
 
@@ -70,11 +70,11 @@ $\begin{aligned} & {\rm argmax}_y \prod_{t=1}^{T_y}  P\left(y^{\left\lt t \right
 
 - **Le chat est sur le tapis.**
 
-  - ***Reference 1:*** **The** cat is on **the** mat.
+  - **_Reference 1:_** **The** cat is on **the** mat.
 
-  - ***Reference 2:*** There is a cat on **the** mat.
+  - **_Reference 2:_** There is a cat on **the** mat.
 
-  - ***Machine Translation 1:*** The the the the the the the.
+  - **_Machine Translation 1:_** The the the the the the the.
 
     - Precision
 
@@ -84,7 +84,7 @@ $\begin{aligned} & {\rm argmax}_y \prod_{t=1}^{T_y}  P\left(y^{\left\lt t \right
 
       $\dfrac{\textsf{max count in reference}}{\textsf{Count(the)}} = \dfrac{\textsf{Count}_{\textsf{clip}}\textsf{(the)}}{\textsf{Count(the)}} = \dfrac{2}{7}$
 
-  - ***Machine Translation 2:*** The cat the cat on the mat.
+  - **_Machine Translation 2:_** The cat the cat on the mat.
 
     - Bigrams Modified Precision
 
@@ -94,19 +94,19 @@ $\begin{aligned} & \textsf{unigram}_{\strut} \\ P_1 &= \dfrac{\displaystyle\sum_
 
 #### Attention Model Intuition
 
-![](dl-su-16/6.png)
+![](Deep-Learning-Andrew-Ng-16/6.png)
 
-![](dl-su-16/7.png)
+![](Deep-Learning-Andrew-Ng-16/7.png)
 
 #### Attention Model
 
 $\begin{aligned} & a ^{\left\lt t' \right\gt} = \left( \overrightarrow {a}^{\left\lt t' \right\gt}, \ \overleftarrow {a}^{\left\lt t' \right\gt} \right) \\ & \begin{aligned} \sum_{t'} {\alpha} ^{\left\lt 1,\,t' \right\gt} = 1 \qquad & {\alpha} ^{\left\lt t,\,t' \right\gt} \textsf{ is the amount of "attention" } y  ^{\left\lt t \right\gt} \textsf{ should pay to } a^{\left\lt t' \right\gt} \\ & {\alpha} ^{\left\lt t,\,t' \right\gt} = \dfrac{\exp \left( e^{\left\lt t,\,t' \right\gt} \right)} {\sum_{t'=1}^{T_x} \exp \left( e^{\left\lt t,\,t' \right\gt} \right)} \end{aligned} \\ \Rightarrow \ & c ^{\left\lt 1 \right\gt} = \sum_{t'} {\alpha} ^{\left\lt 1,\,t' \right\gt} a ^{\left\lt t' \right\gt} \end{aligned}$
 
-![](dl-su-16/8.png)
+![](Deep-Learning-Andrew-Ng-16/8.png)
 
-***quadratic time / cost***
+**_quadratic time / cost_**
 
-![](dl-su-16/9.png)
+![](Deep-Learning-Andrew-Ng-16/9.png)
 
 ### Speech recognition - Audio data
 
@@ -114,28 +114,28 @@ $\begin{aligned} & a ^{\left\lt t' \right\gt} = \left( \overrightarrow {a}^{\lef
 
 audio → frequency → end-to-end deep neuron network
 
-![](dl-su-16/10.png)
+![](Deep-Learning-Andrew-Ng-16/10.png)
 
 ##### CTC (Connectionist Temporal Classification)
 
-![](dl-su-16/11.png)
+![](Deep-Learning-Andrew-Ng-16/11.png)
 
-*collapse repeated characters not separated by "blank"*
+_collapse repeated characters not separated by "blank"_
 
 #### Trigger Word Detection
 
-![](dl-su-16/12.png)
+![](Deep-Learning-Andrew-Ng-16/12.png)
 
 ### Programming Assignments
 
 #### Neural Machine Translation with Attention
 
-![](dl-su-16/13.png)
+![](Deep-Learning-Andrew-Ng-16/13.png)
 
-![](dl-su-16/14.png)
+![](Deep-Learning-Andrew-Ng-16/14.png)
 
 #### Trigger word detection
 
-![](dl-su-16/15.png)
+![](Deep-Learning-Andrew-Ng-16/15.png)
 
 <a href='https://github.com/bugstop/coursera-deep-learning-solutions' target="_blank">Solutions Manual</a>

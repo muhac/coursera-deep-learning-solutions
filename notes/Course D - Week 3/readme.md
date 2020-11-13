@@ -7,9 +7,9 @@ mathjax: true
 ---
 
 Deep Learning Specialization, Course D
-**Convolutional Neural Networks** by deeplearning.ai, ***Andrew Ng,*** [Coursera]( https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
+**Convolutional Neural Networks** by deeplearning.ai, **_Andrew Ng,_** [Coursera](https://www.coursera.org/learn/neural-networks-deep-learning/home/info)
 
-***Week 3:*** *Object Detection*
+**_Week 3:_** _Object Detection_
 
 1. Understand the challenges of Object Localization, Object Detection and Landmark Finding
 2. Understand and implement non-max suppression
@@ -25,13 +25,13 @@ Deep Learning Specialization, Course D
 
 image classification → classification with localization → detection
 
-![](dl-su-12/1.png)
+![](Deep-Learning-Andrew-Ng-12/1.png)
 
 - is there any object?
 - what is the size?
 - what is the class?
 
-$y = \left[\begin{matrix} p_c \\ b_x \\ b_y \\ b_h \\ b_w \\ c_1 \\ c_2 \\ c_3 \end{matrix}\right] \qquad y_{\rm car} = \left[\begin{matrix} 1 \\ 0.5 \\ 0.7 \\ 0.3 \\ 0.4 \\ 0 \\ 1 \\ 0 \end{matrix}\right] \qquad y_{\rm no\_obj} = \left[\begin{matrix} 0 \\ ? \\ ? \\ ? \\ ? \\ ? \\ ? \\ ? \end{matrix}\right]$
+$y = \left[\begin{matrix} p_c \\ b_x \\ b_y \\ b_h \\ b_w \\ c_1 \\ c_2 \\ c_3 \end{matrix}\right] \qquad y_{\rm car} = \left[\begin{matrix} 1 \\ 0.5 \\ 0.7 \\ 0.3 \\ 0.4 \\ 0 \\ 1 \\ 0 \end{matrix}\right] \qquad y_{\rm no\\_obj} = \left[\begin{matrix} 0 \\ ? \\ ? \\ ? \\ ? \\ ? \\ ? \\ ? \end{matrix}\right]$
 
 $L= \begin{cases} \left(\hat{y}_1-y_1\right)^2 + \left(\hat{y}_2-y_2\right)^2 + \dots + \left(\hat{y}_8-y_8\right)^2 \quad &{\rm if}\ \ y_1=1 \\ \left(\hat{y}_1-y_1\right)^2 &{\rm if}\ \ y_1=0 \end{cases}$
 
@@ -43,25 +43,25 @@ $y = \left[\begin{matrix} p_c \\ l_{1_x} \\ l_{1_y} \\ l_{2_x} \\ l_{2_y} \\ \vd
 
 ##### Sliding Window Detection
 
-***computational cost***
+**_computational cost_**
 
 #### Convolutional Implementation of Sliding Windows
 
 #### Turning FC Layer into CONV Layers
 
-![](dl-su-12/2.png)
+![](Deep-Learning-Andrew-Ng-12/2.png)
 
 ##### Convolution Implementation of Sliding Windows
 
-![](dl-su-12/3.png)
+![](Deep-Learning-Andrew-Ng-12/3.png)
 
 #### Bounding Box Predictions
 
 ##### YOLO Algorithm
 
-![](dl-su-12/4.png)
+![](Deep-Learning-Andrew-Ng-12/4.png)
 
-*convolutional*
+_convolutional_
 
 $b_x,\, b_y,\, b_h,\, b_w$ are specified relative to the grid cell
 
@@ -71,7 +71,7 @@ ${\rm IoU}=\dfrac{\rm size \ of \ \cap}{\rm size \ of \ \cup} \geq 0.5 \Rightarr
 
 #### Non-Max Suppression
 
-![](dl-su-12/5.png)
+![](Deep-Learning-Andrew-Ng-12/5.png)
 
 1. discard all boxes with p<sub>c</sub> < 0.6
 2. while there are any remaining boxes
@@ -81,7 +81,7 @@ ${\rm IoU}=\dfrac{\rm size \ of \ \cap}{\rm size \ of \ \cup} \geq 0.5 \Rightarr
 
 #### Anchor Boxes
 
-![](dl-su-12/6.png)
+![](Deep-Learning-Andrew-Ng-12/6.png)
 
 **Previously**
 Each object in training image is assigned to grid cell that contains that object's midpoint
@@ -93,7 +93,7 @@ $y = \left[\begin{matrix} p_c \\ b_x \\ b_y \\ b_h \\ b_w \\ c_1 \\ c_2 \\ c_3 \
 
 #### YOLO Algorithm
 
-![](dl-su-12/7.png)
+![](Deep-Learning-Andrew-Ng-12/7.png)
 
 1. for each grid cell, get two predicted bounding boxes
 2. get rid of low probability predictions
@@ -107,6 +107,6 @@ $y = \left[\begin{matrix} p_c \\ b_x \\ b_y \\ b_h \\ b_w \\ c_1 \\ c_2 \\ c_3 \
 
 #### Car detection with YOLO
 
-![](/dl-su-12/8.png)
+![](/Deep-Learning-Andrew-Ng-12/8.png)
 
 <a href='https://github.com/bugstop/coursera-deep-learning-solutions' target="_blank">Solutions Manual</a>
